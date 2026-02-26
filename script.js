@@ -568,12 +568,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const typedTextElement = document.getElementById('typed-text');
   if (typedTextElement) {
     const words = [
-      'Computer Science Student',
-      'Full-Stack Developer',
-      'Problem Solver',
-      'Tech Enthusiast',
-      'Creative Thinker',
-      'Team Player'
+      'Materials Science & Engineering student', // 원하는 문구로 수정하세요 (예: 대학생)
+      'AI-Driven Modeler',            // 예: 웹 개발자
+      'Relentless Experimentalist',       // 예: 열정적인 학습자
+      'Research Pioneer'                   // 필요한 만큼 줄이거나 늘려도 됩니다
     ];
     new TypingEffect(typedTextElement, words, 100, 50, 2000);
   }

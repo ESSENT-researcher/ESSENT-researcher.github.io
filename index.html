@@ -6,19 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- SEO Meta Tags -->
-  <title>Dhruv Thakar | Computer Science Student & Developer Portfolio</title>
-  <meta name="description" content="Portfolio of Dhruv Thakar, Computer Science student at Ontario Tech University. Showcasing projects in Java, Python, JavaScript, web development, and embedded systems." />
-  <meta name="keywords" content="Dhruv Thakar, Computer Science, Ontario Tech University, Java, Python, JavaScript, Web Development, Portfolio, Software Developer" />
-  <meta name="author" content="Dhruv Thakar" />
+  <title>Yoon JaeU | Computer Science Student & Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Yoon JaeU, Computer Science student at Ontario Tech University. Showcasing projects in Java, Python, JavaScript, web development, and embedded systems." />
+  <meta name="keywords" content="Yoon JaeU, Computer Science, Ontario Tech University, Java, Python, JavaScript, Web Development, Portfolio, Software Developer" />
+  <meta name="author" content="Yoon JaeU" />
   <meta name="robots" content="index, follow" />
   
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Dhruv Thakar | Computer Science Student & Developer" />
+  <meta property="og:title" content="Yoon JaeU | Computer Science Student & Developer" />
   <meta property="og:description" content="Portfolio showcasing projects in software development, web technologies, and embedded systems." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://dhruvthakar.dev" />
   <meta property="og:image" content="https://dhruvthakar.dev/profile.png" />
-  <meta property="og:site_name" content="Dhruv Thakar Portfolio" />
+  <meta property="og:site_name" content="Yoon JaeU Portfolio" />
   
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -44,7 +44,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Dhruv Thakar",
+    "name": "Yoon JaeU",
     "jobTitle": "Computer Science Student",
     "description": "Computer Science student at Ontario Tech University passionate about software development and technology",
     "url": "https://dhruvthakar.dev",
@@ -124,8 +124,8 @@
     
     /* Project card entrance animation */
     .project-card {
-      opacity: 0;
-      transform: translateY(30px);
+      opacity: 1;
+      transform: translateY(0);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
     
@@ -254,12 +254,14 @@
     
     /* Active link styling */
     .nav-link.active-link {
-      background: linear-gradient(135deg, rgba(20, 184, 166, 0.1), rgba(34, 211, 238, 0.1));
-      color: #14b8a6;
+      background: linear-gradient(to right, #14b8a6, #22d3ee);
+      color: #0f172a;
+      box-shadow: 0 0 20px rgba(20, 184, 166, 0.5);
+      transform: scale(1.05);
     }
     
-    .nav-link.active-link span:last-child {
-      width: 100%;
+    .nav-link.active-link span.absolute {
+      display: none;
     }
     
     /* Navbar scroll effect */
@@ -270,7 +272,7 @@
   </style>
 </head>
 
-<body class="bg-gray-900 text-gray-100 font-sans">
+<body id="top" class="bg-gray-900 text-gray-100 font-sans">
 
   <!-- Skip to Content Link -->
   <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[#22d3ee] text-[#0f172a] px-4 py-2 rounded-lg font-semibold z-50 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900">
@@ -292,12 +294,12 @@
     <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center" role="navigation" aria-label="Main navigation">
   
       <!-- Logo & Name -->
-      <a href="#home" class="group flex items-center gap-3 text-2xl font-bold uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded-lg px-2 py-1 transition-all duration-300 hover:scale-105" aria-label="Dhruv Thakar - Go to home">
+      <a href="#top" class="group flex items-center gap-3 text-2xl font-bold uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded-lg px-2 py-1 transition-all duration-300 hover:scale-105" aria-label="Dhruv Thakar - Go to home">
         <div class="relative">
           <div class="absolute inset-0 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] rounded-full blur-md opacity-50 group-hover:opacity-100 transition-opacity"></div>
-          <img src="assets/logo.png" alt="Dhruv Thakar Logo" class="relative w-10 h-10 rounded-full border-2 border-[#14b8a6] group-hover:border-[#22d3ee] transition-all duration-300 sm:inline-block hidden" loading="eager" />
+          <img src="assets/logo.png" alt="Yoon JaeU Logo" class="relative w-10 h-10 rounded-full border-2 border-[#14b8a6] group-hover:border-[#22d3ee] transition-all duration-300 sm:inline-block hidden" loading="eager" />
         </div>
-        <span class="gradient-text group-hover:animate-gradient">Dhruv Thakar</span>
+        <span class="gradient-text group-hover:animate-gradient">Yoon JaeU</span>
       </a>
   
       <!-- Desktop Navigation -->
@@ -305,7 +307,7 @@
         <!-- Navigation Links -->
         <ul id="nav-links" role="menubar" class="flex items-center gap-1">
           <li role="none">
-            <a href="#home" class="nav-link group relative px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:bg-[#14b8a6]/10" role="menuitem" aria-current="page">
+            <a href="#top" class="nav-link group relative px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:bg-[#14b8a6]/10" role="menuitem" aria-current="page">
               <span class="relative z-10">Home</span>
               <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] group-hover:w-full transition-all duration-300"></span>
             </a>
@@ -341,17 +343,12 @@
             </a>
           </li>
           <li role="none">
-            <a href="#contact" class="px-6 py-2.5 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] hover:from-[#22d3ee] hover:to-[#14b8a6] rounded-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(20,184,166,0.5)]" role="menuitem">
-              Contact
+            <a href="#contact" class="nav-link group relative px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:bg-[#14b8a6]/10" role="menuitem">
+              <span class="relative z-10">Contact</span>
+              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] group-hover:w-full transition-all duration-300"></span>
             </a>
           </li>
         </ul>
-        
-        <!-- Dark Mode Toggle -->
-        <button id="theme-toggle" class="ml-2 w-10 h-10 flex items-center justify-center rounded-lg bg-gray-800 hover:bg-[#14b8a6] text-[#22d3ee] hover:text-white transition-all duration-300 hover:scale-110 hover:rotate-12 focus:outline-none focus:ring-2 focus:ring-[#22d3ee]" 
-                aria-label="Toggle dark mode" title="Toggle theme">
-          <i class="fas fa-moon" aria-hidden="true"></i>
-        </button>
       </div>
 
       <!-- Mobile Menu Button -->
@@ -365,7 +362,7 @@
     <div id="mobile-nav" class="hidden md:hidden bg-[#0f172a]/98 backdrop-blur-xl border-t border-[#14b8a6]/30">
       <ul class="px-6 py-4 space-y-2">
         <li>
-          <a href="#home" class="block px-4 py-3 rounded-lg font-semibold hover:bg-[#14b8a6]/20 hover:text-[#14b8a6] transition-all duration-300 border-l-4 border-transparent hover:border-[#14b8a6]">
+          <a href="#top" class="block px-4 py-3 rounded-lg font-semibold hover:bg-[#14b8a6]/20 hover:text-[#14b8a6] transition-all duration-300 border-l-4 border-transparent hover:border-[#14b8a6]">
             <i class="fas fa-home w-6"></i> Home
           </a>
         </li>
@@ -442,13 +439,13 @@
     </div>
   
     <!-- Main Content -->
-    <div class="max-w-4xl relative z-10">
+    <div class="max-w-7xl relative z-10">
       <!-- Profile with Glow Effect -->
       <div class="relative inline-block mb-8">
-        <div class="absolute inset-0 bg-gradient-to-r from-[#22d3ee] to-[#14b8a6] rounded-full blur-2xl opacity-50 animate-pulse"></div>
-        <img src="assets/profile.png" alt="Professional headshot of Dhruv Thakar, Computer Science student"
-          class="relative mx-auto w-40 h-40 md:w-48 md:h-48 rounded-full shadow-2xl border-4 border-[#14b8a6] hover:scale-105 transition-transform duration-500 lazy-load" 
-          loading="eager" width="192" height="192" />
+        <div class="absolute inset-0 bg-gradient-to-r from-[#22d3ee] to-[#14b8a6] rounded-2xl blur-2xl opacity-50 animate-pulse"></div>
+        <img src="assets/profile.png" alt="Professional headshot of Yoon JaeU, Computer Science student"
+          class="relative mx-auto w-40 h-52 md:w-48 md:h-64 rounded-2xl object-cover object-top shadow-2xl border-4 border-[#14b8a6] hover:scale-105 transition-transform duration-500 lazy-load" 
+          loading="eager" width="192" height="256" />
       </div>
   
       <!-- Intro with Enhanced Typography -->
@@ -461,7 +458,7 @@
         <!-- Name with Gradient -->
         <h1 id="main-heading" class="text-5xl md:text-7xl font-extrabold mb-4 animate-fade-in" style="animation-delay: 0.2s;">
           <span class="bg-gradient-to-r from-[#22d3ee] via-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
-            Dhruv Thakar
+            Yoon JaeU
           </span>
         </h1>
         
@@ -473,16 +470,15 @@
         </div>
         
         <!-- Description -->
-        <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8 leading-relaxed animate-fade-in" style="animation-delay: 0.4s;">
-          Passionate about building <span class="text-[#22d3ee] font-semibold">intelligent</span>, 
-          <span class="text-[#14b8a6] font-semibold">efficient</span>, and 
-          <span class="text-[#22d3ee] font-semibold">meaningful</span> tech solutions.
-          Turning ideas into reality through code, creativity, and collaboration.
+        <p class="text-gray-300 text-[1.05rem] max-w-6xl mx-auto mb-8 leading-relaxed animate-fade-in" style="animation-delay: 0.4s;">
+          A <span class="text-[#22d3ee] font-semibold">visionary materials researcher</span> dedicated to accelerating the future through 
+          <span class="text-[#14b8a6] font-semibold">innovative </span> and 
+          <span class="text-[#22d3ee] font-semibold">challenging</span> experiments.
         </p>
       </div>
   
       <!-- CTA Buttons -->
-      <div class="flex flex-wrap justify-center gap-4 mb-8 animate-fade-in" style="animation-delay: 0.5s;">
+      <div class="flex flex-wrap justify-center gap-4 mb-8 mt-12 animate-fade-in" style="animation-delay: 0.5s;">
         <a href="#projects" class="group relative inline-flex items-center gap-2 bg-gradient-to-r from-[#22d3ee] to-[#14b8a6] hover:from-[#06b6d4] hover:to-[#0d9488] text-[#0f172a] font-bold px-8 py-4 rounded-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900" 
            aria-describedby="cta-description">
           <i class="fas fa-rocket" aria-hidden="true"></i>
@@ -499,42 +495,36 @@
       <!-- Quick Stats -->
       <div class="grid grid-cols-3 gap-6 max-w-2xl mx-auto mb-10 animate-fade-in" style="animation-delay: 0.6s;">
         <div class="text-center">
-          <div class="text-3xl md:text-4xl font-bold text-[#22d3ee] mb-1">11+</div>
-          <div class="text-sm text-gray-400">Projects</div>
+          <div class="text-3xl md:text-4xl font-bold text-[#22d3ee] mb-1">3.75 / 4.5</div>
+          <div class="text-sm text-gray-400">GPA</div>
         </div>
         <div class="text-center">
-          <div class="text-3xl md:text-4xl font-bold text-[#14b8a6] mb-1">5+</div>
-          <div class="text-sm text-gray-400">Technologies</div>
+          <div class="text-3xl md:text-4xl font-bold text-[#14b8a6] mb-1">OPIC IH</div>
+          <div class="text-sm text-gray-400">English Proficiency</div>
         </div>
         <div class="text-center">
-          <div class="text-3xl md:text-4xl font-bold text-[#22d3ee] mb-1">2028</div>
-          <div class="text-sm text-gray-400">Graduation</div>
+          <div class="text-3xl md:text-4xl font-bold text-[#22d3ee] mb-1">2027-02</div>
+          <div class="text-sm text-gray-400">Graduation will be</div>
         </div>
       </div>
   
       <!-- Social Links with Enhanced Design -->
       <div class="flex justify-center gap-4 mb-12 animate-fade-in" style="animation-delay: 0.7s;" role="list" aria-label="Social media links">
-        <a href="https://github.com/dhruvht612" target="_blank" rel="noopener noreferrer" 
-           class="group relative w-12 h-12 flex items-center justify-center bg-gray-800/50 hover:bg-gray-700 text-gray-400 hover:text-white rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900" 
-           aria-label="Visit Dhruv's GitHub profile (opens in new tab)" role="listitem">
-          <i class="fab fa-github text-xl" aria-hidden="true"></i>
-          <span class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">GitHub</span>
-        </a>
-        <a href="https://linkedin.com/in/dhruv-thakar-ba46aa296" target="_blank" rel="noopener noreferrer"
-          class="group relative w-12 h-12 flex items-center justify-center bg-gray-800/50 hover:bg-[#0077b5] text-gray-400 hover:text-white rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#14b8a6] focus:ring-offset-2 focus:ring-offset-gray-900" 
-          aria-label="Visit Dhruv's LinkedIn profile (opens in new tab)" role="listitem">
-          <i class="fab fa-linkedin text-xl" aria-hidden="true"></i>
-          <span class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">LinkedIn</span>
-        </a>
-        <a href="mailto:thakardhruvh@gmail.com" 
+        <a href="tel:010-2026-0217" 
            class="group relative w-12 h-12 flex items-center justify-center bg-gray-800/50 hover:bg-[#ea4335] text-gray-400 hover:text-white rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#facc15] focus:ring-offset-2 focus:ring-offset-gray-900" 
-           aria-label="Send email to thakardhruvh@gmail.com" role="listitem">
+           aria-label="Call 010-2026-0217" role="listitem">
+          <i class="fas fa-phone text-xl" aria-hidden="true"></i>
+          <span class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Phone</span>
+      </a>
+        <a href="mailto:u2216@naver.com" 
+           class="group relative w-12 h-12 flex items-center justify-center bg-gray-800/50 hover:bg-[#ea4335] text-gray-400 hover:text-white rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#facc15] focus:ring-offset-2 focus:ring-offset-gray-900" 
+           aria-label="Send email to u2216@naver.com" role="listitem">
           <i class="fas fa-envelope text-xl" aria-hidden="true"></i>
           <span class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Email</span>
         </a>
-        <a href="https://www.instagram.com/dhruv_200612/?hl=en" target="_blank" rel="noopener noreferrer"
+        <a href="https://www.instagram.com/yoon_jaeu/" target="_blank" rel="noopener noreferrer"
           class="group relative w-12 h-12 flex items-center justify-center bg-gray-800/50 hover:bg-gradient-to-br hover:from-[#833ab4] hover:via-[#fd1d1d] hover:to-[#fcb045] text-gray-400 hover:text-white rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#ec4899] focus:ring-offset-2 focus:ring-offset-gray-900" 
-          aria-label="Visit Dhruv's Instagram profile (opens in new tab)" role="listitem">
+          aria-label="Visit Yoon JaeU's Instagram profile (opens in new tab)" role="listitem">
           <i class="fab fa-instagram text-xl" aria-hidden="true"></i>
           <span class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Instagram</span>
         </a>
@@ -574,9 +564,9 @@
           <!-- Profile Image with Frame -->
           <div class="relative mb-8 group">
             <div class="absolute -inset-1 bg-gradient-to-r from-[#22d3ee] to-[#14b8a6] rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-            <img src="assets/profile.png" alt="Professional headshot of Dhruv Thakar in a casual setting"
-              class="relative w-64 h-64 rounded-2xl object-cover shadow-2xl lazy-load" 
-              loading="lazy" width="256" height="256" />
+            <img src="assets/profile.png" alt="Professional headshot of Yoon JaeU in a casual setting"
+              class="relative w-64 h-80 rounded-2xl object-cover object-top shadow-2xl lazy-load" 
+              loading="lazy" width="256" height="320" />
           </div>
 
           <!-- Quick Info Cards -->
@@ -586,7 +576,7 @@
                 <i class="fas fa-graduation-cap text-2xl text-[#22d3ee]"></i>
                 <div>
                   <p class="text-xs text-gray-400">Education</p>
-                  <p class="text-sm font-semibold">Ontario Tech University</p>
+                  <p class="text-sm font-semibold">University of Ulsan</p>
                 </div>
               </div>
             </div>
@@ -596,7 +586,7 @@
                 <i class="fas fa-map-marker-alt text-2xl text-[#14b8a6]"></i>
                 <div>
                   <p class="text-xs text-gray-400">Location</p>
-                  <p class="text-sm font-semibold">Oshawa, Ontario</p>
+                  <p class="text-sm font-semibold">Ulsan, S. Korea</p>
                 </div>
               </div>
             </div>
@@ -606,7 +596,7 @@
                 <i class="fas fa-envelope text-2xl text-[#22d3ee]"></i>
                 <div>
                   <p class="text-xs text-gray-400">Email</p>
-                  <p class="text-xs font-semibold">thakardhruvh@gmail.com</p>
+                  <p class="text-sm font-semibold">u2216@naver.com</p>
                 </div>
               </div>
             </div>
@@ -614,10 +604,10 @@
 
           <!-- CTA Buttons -->
           <div class="w-full space-y-3">
-            <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer"
+            <a href="assets/cv.pdf" target="_blank" rel="noopener noreferrer"
               class="block w-full bg-gradient-to-r from-[#22d3ee] to-[#14b8a6] hover:from-[#06b6d4] hover:to-[#0d9488] text-[#0f172a] font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(34,211,238,0.5)] focus:outline-none focus:ring-2 focus:ring-[#22d3ee] text-center"
-              aria-label="Download Dhruv's resume (PDF, opens in new tab)">
-              <i class="fas fa-download mr-2" aria-hidden="true"></i> Download Resume
+              aria-label="Download Yoon JaeU's curriculum vitae (PDF, opens in new tab)">
+              <i class="fas fa-download mr-2" aria-hidden="true"></i> Download CV
             </a>
 
             <a href="#contact"
@@ -632,13 +622,13 @@
           
           <!-- Tab Navigation -->
           <div class="flex flex-wrap gap-2 mb-6 border-b border-gray-700 pb-4">
-            <button class="about-tab active px-4 py-2 rounded-lg font-semibold transition-all duration-300" data-tab="story">
+            <button class="about-tab active px-4 py-2 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-[#22d3ee] to-[#14b8a6] text-[#0f172a]" data-tab="story">
               <i class="fas fa-user mr-2"></i>My Story
             </button>
-            <button class="about-tab px-4 py-2 rounded-lg font-semibold transition-all duration-300" data-tab="interests">
+            <button class="about-tab px-4 py-2 rounded-lg font-semibold transition-all duration-300 text-gray-400 hover:text-white" data-tab="interests">
               <i class="fas fa-heart mr-2"></i>Interests
             </button>
-            <button class="about-tab px-4 py-2 rounded-lg font-semibold transition-all duration-300" data-tab="facts">
+            <button class="about-tab px-4 py-2 rounded-lg font-semibold transition-all duration-300 text-gray-400 hover:text-white" data-tab="facts">
               <i class="fas fa-star mr-2"></i>Fun Facts
             </button>
           </div>
@@ -650,25 +640,22 @@
             <div class="tab-content active" id="story-tab">
               <div class="space-y-4">
                 <p class="text-gray-300 leading-relaxed text-lg">
-                  Hey there! 👋 I'm <span class="font-bold text-white bg-gradient-to-r from-[#22d3ee] to-[#14b8a6] bg-clip-text text-transparent">Dhruv Thakar</span>, 
-                  a passionate Computer Science student at <span class="text-[#22d3ee]">Ontario Tech University</span>.
+                  Hey there! 👋 I'm <span class="font-bold text-white bg-gradient-to-r from-[#22d3ee] to-[#14b8a6] bg-clip-text text-transparent">Yoon JaeU</span>, 
+                  a passionate Materials Science & Enineering student at <span class="text-[#22d3ee]">University of Ulsan</span>.
                 </p>
                 
                 <p class="text-gray-400 leading-relaxed">
-                  I'm on a mission to turn complex problems into elegant solutions through code. Whether it's building responsive web applications, 
-                  designing efficient algorithms, or tinkering with hardware projects, I love the challenge of creating technology that makes a difference.
+                  I'm on a mission to accelerate materials discovery by bridging hands-on experiments with computational simulations. Whether it's fabricating thin-film solar cells, engineering custom lab equipment, or predicting material behaviors through code, I thrive on turning complex material challenges into innovative solutions.
                 </p>
 
                 <p class="text-gray-400 leading-relaxed">
-                  My journey in tech started with curiosity and has evolved into a deep passion for <span class="text-[#14b8a6] font-semibold">full-stack development</span>, 
-                  <span class="text-[#22d3ee] font-semibold">data structures</span>, and <span class="text-[#14b8a6] font-semibold">embedded systems</span>. 
-                  I thrive in collaborative environments and enjoy participating in hackathons, where I can combine creativity with technical skills.
+                  My journey in materials science & engineering began with a simple curiosity about bicycle materials. This early fascination merged with the computer programming skills I picked up in middle school, and has now evolved into a deep passion for <span class="text-[#14b8a6] font-semibold">thin-film solar cell fabrication</span>, <span class="text-[#14b8a6] font-semibold">electrochemical analysis</span>, and <span class="text-[#14b8a6] font-semibold">computational modeling</span>. I truly enjoy taking diverse approaches to problem-solving, whether it's <span class="text-[#22d3ee] font-semibold">designing a custom Teflon housing via 3D modeling</span> to eliminate experimental errors or <span class="text-[#22d3ee] font-semibold">computationally simulating the Electrical Double Layer (EDL)</span>.
                 </p>
 
                 <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border-l-4 border-[#22d3ee] mt-6">
                   <p class="text-gray-300 italic">
                     <i class="fas fa-quote-left text-[#22d3ee] mr-2"></i>
-                    "I believe that technology should be accessible, innovative, and impactful. Every line of code is an opportunity to create something meaningful."
+                    "Accelerating the future through innovative research."
                     <i class="fas fa-quote-right text-[#22d3ee] ml-2"></i>
                   </p>
                 </div>
@@ -681,60 +668,60 @@
                 
                 <div class="bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#22d3ee] transition-all hover:scale-105">
                   <div class="flex items-start gap-3">
-                    <i class="fas fa-code text-3xl text-[#22d3ee]"></i>
+                    <i class="fas fa-battery text-3xl text-[#22d3ee]"></i>
                     <div>
-                      <h4 class="font-bold text-white mb-2">Web Development</h4>
-                      <p class="text-sm text-gray-400">Building modern, responsive, and user-friendly web applications with the latest technologies.</p>
+                      <h4 class="font-bold text-white mb-2">Battery</h4>
+                      <p class="text-sm text-gray-400">Developing and optimizing advanced materials to accelerate the next generation of high-performance, sustainable battery technologies.</p>
                     </div>
                   </div>
                 </div>
 
                 <div class="bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#14b8a6] transition-all hover:scale-105">
                   <div class="flex items-start gap-3">
-                    <i class="fas fa-robot text-3xl text-[#14b8a6]"></i>
+                    <i class="fas fa-computer text-3xl text-[#14b8a6]"></i>
                     <div>
-                      <h4 class="font-bold text-white mb-2">Robotics & IoT</h4>
-                      <p class="text-sm text-gray-400">Exploring embedded systems, Arduino projects, and creating intelligent hardware solutions.</p>
+                      <h4 class="font-bold text-white mb-2">AI</h4>
+                      <p class="text-sm text-gray-400">Leveraging Machine Learning and computational modeling to predict material behaviors and discover optimal synthesis conditions.</p>
                     </div>
                   </div>
                 </div>
 
                 <div class="bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#22d3ee] transition-all hover:scale-105">
                   <div class="flex items-start gap-3">
-                    <i class="fas fa-brain text-3xl text-[#22d3ee]"></i>
+                    <i class="fas fa-microchip text-3xl text-[#22d3ee]"></i>
                     <div>
-                      <h4 class="font-bold text-white mb-2">Problem Solving</h4>
-                      <p class="text-sm text-gray-400">Tackling algorithmic challenges and competitive programming to sharpen my skills.</p>
+                      <h4 class="font-bold text-white mb-2">Semiconductor</h4>
+                      <p class="text-sm text-gray-400"></p>
                     </div>
                   </div>
                 </div>
 
                 <div class="bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#14b8a6] transition-all hover:scale-105">
                   <div class="flex items-start gap-3">
-                    <i class="fas fa-users text-3xl text-[#14b8a6]"></i>
+                    <i class="fas fa-brain text-3xl text-[#14b8a6]"></i>
                     <div>
-                      <h4 class="font-bold text-white mb-2">Community Building</h4>
-                      <p class="text-sm text-gray-400">Active in student organizations, hackathons, and tech communities to learn and grow together.</p>
+                      <h4 class="font-bold text-white mb-2">Problem solving</h4>
+                      <p class="text-sm text-gray-400">Overcoming experimental limitations by independently designing and fabricating custom lab equipment.</p>
                     </div>
                   </div>
                 </div>
 
                 <div class="bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#22d3ee] transition-all hover:scale-105">
                   <div class="flex items-start gap-3">
-                    <i class="fas fa-book text-3xl text-[#22d3ee]"></i>
+                    <i class="fas fa-sun text-3xl text-[#22d3ee]"></i>
                     <div>
-                      <h4 class="font-bold text-white mb-2">Continuous Learning</h4>
-                      <p class="text-sm text-gray-400">Always exploring new frameworks, languages, and technologies to stay ahead of the curve.</p>
+                      <h4 class="font-bold text-white mb-2">Solar cell</h4>
+                      <p class="text-sm text-gray-400">Fabricating thin-film solar cells via electrodeposition and meticulously optimizing compex experimental parameters for higher efficiency.</p>
                     </div>
                   </div>
                 </div>
 
                 <div class="bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#14b8a6] transition-all hover:scale-105">
                   <div class="flex items-start gap-3">
-                    <i class="fas fa-gamepad text-3xl text-[#14b8a6]"></i>
+                    <i class="fas fa-fire text-3xl text-[#14b8a6]"></i>
                     <div>
-                      <h4 class="font-bold text-white mb-2">Gaming & Tech</h4>
-                      <p class="text-sm text-gray-400">Passionate about gaming, PC building, and staying updated with the latest tech trends.</p>
+                      <h4 class="font-bold text-white mb-2">Relentless mind</h4>
+                      <p class="text-sm text-gray-400">Tackling experimental errors head-on by engineering custom 3D-printed lab equipment and persistently pursuing optimal results.</p>
                     </div>
                   </div>
                 </div>
@@ -751,8 +738,8 @@
                     ☕
                   </div>
                   <div>
-                    <h4 class="font-bold text-white mb-1">Coffee Enthusiast</h4>
-                    <p class="text-sm text-gray-400">My code quality is directly proportional to my coffee intake. ☕</p>
+                    <h4 class="font-bold text-white mb-1">Coding with AI</h4>
+                    <p class="text-sm text-gray-400">ai driven coding~~~~~~~~~~. ☕</p>
                   </div>
                 </div>
 
@@ -761,8 +748,8 @@
                     🌙
                   </div>
                   <div>
-                    <h4 class="font-bold text-white mb-1">Night Owl</h4>
-                    <p class="text-sm text-gray-400">My best code is written between 10 PM and 2 AM. The bugs don't stand a chance!</p>
+                    <h4 class="font-bold text-white mb-1">Passionate researcher</h4>
+                    <p class="text-sm text-gray-400">I'm very passionate researcher</p>
                   </div>
                 </div>
 
@@ -771,8 +758,8 @@
                     🎯
                   </div>
                   <div>
-                    <h4 class="font-bold text-white mb-1">First Programming Language</h4>
-                    <p class="text-sm text-gray-400">Started my coding journey with Python and fell in love with programming ever since!</p>
+                    <h4 class="font-bold text-white mb-1">Deskterior</h4>
+                    <p class="text-sm text-gray-400">I love deskterior</p>
                   </div>
                 </div>
 
@@ -781,8 +768,8 @@
                     🚀
                   </div>
                   <div>
-                    <h4 class="font-bold text-white mb-1">Hackathon Enthusiast</h4>
-                    <p class="text-sm text-gray-400">I love the adrenaline rush of building projects under time pressure with amazing teammates!</p>
+                    <h4 class="font-bold text-white mb-1">Ride a bicycle</h4>
+                    <p class="text-sm text-gray-400">I love ride a bicycle</p>
                   </div>
                 </div>
 
@@ -791,8 +778,8 @@
                     🎵
                   </div>
                   <div>
-                    <h4 class="font-bold text-white mb-1">Music While Coding</h4>
-                    <p class="text-sm text-gray-400">Lo-fi beats and instrumental music are my coding soundtrack. Helps me stay in the zone!</p>
+                    <h4 class="font-bold text-white mb-1">Listen to music</h4>
+                    <p class="text-sm text-gray-400">I love listen to music</p>
                   </div>
                 </div>
 
@@ -801,8 +788,8 @@
                     💡
                   </div>
                   <div>
-                    <h4 class="font-bold text-white mb-1">Rubber Duck Debugging</h4>
-                    <p class="text-sm text-gray-400">Sometimes explaining my code to an imaginary duck is the best way to solve bugs!</p>
+                    <h4 class="font-bold text-white mb-1">Seeing a youtube</h4>
+                    <p class="text-sm text-gray-400">I love seeing a youtube</p>
                   </div>
                 </div>
 
@@ -867,19 +854,19 @@
       <!-- Project Stats -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 max-w-4xl mx-auto">
         <div class="bg-gradient-to-br from-[#14b8a6]/10 to-[#22d3ee]/10 backdrop-blur-sm p-4 rounded-xl border border-[#14b8a6]/20 text-center hover:scale-105 transition-transform duration-300">
-          <div class="text-3xl font-bold text-[#14b8a6] mb-1">15+</div>
+          <div class="text-3xl font-bold text-[#14b8a6] mb-1">6</div>
           <div class="text-xs text-gray-400 uppercase tracking-wide">Total Projects</div>
         </div>
         <div class="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm p-4 rounded-xl border border-purple-500/20 text-center hover:scale-105 transition-transform duration-300">
-          <div class="text-3xl font-bold text-purple-400 mb-1">8+</div>
-          <div class="text-xs text-gray-400 uppercase tracking-wide">Technologies</div>
+          <div class="text-3xl font-bold text-purple-400 mb-1">5</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wide">Awards & Honors</div>
         </div>
         <div class="bg-gradient-to-br from-yellow-500/10 to-orange-500/10 backdrop-blur-sm p-4 rounded-xl border border-yellow-500/20 text-center hover:scale-105 transition-transform duration-300">
-          <div class="text-3xl font-bold text-yellow-400 mb-1">100%</div>
-          <div class="text-xs text-gray-400 uppercase tracking-wide">Open Source</div>
+          <div class="text-3xl font-bold text-yellow-400 mb-1">17</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wide">Handling SW & HW</div>
         </div>
         <div class="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 backdrop-blur-sm p-4 rounded-xl border border-blue-500/20 text-center hover:scale-105 transition-transform duration-300">
-          <div class="text-3xl font-bold text-blue-400 mb-1">2025</div>
+          <div class="text-3xl font-bold text-blue-400 mb-1">Feb.2026</div>
           <div class="text-xs text-gray-400 uppercase tracking-wide">Latest Update</div>
         </div>
       </div>
@@ -888,7 +875,7 @@
     <!-- =========================== FILTER BUTTONS =========================== -->
     <div id="filter-buttons" class="flex flex-wrap justify-center gap-3 mb-12" role="group" aria-label="Project filter options">
       <button
-        class="filter-btn active px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900"
+        class="filter-btn active px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#14b8a6] hover:text-[#14b8a6] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#14b8a6] focus:ring-offset-2 focus:ring-offset-gray-900"
         data-filter="all" aria-pressed="true" aria-label="Show all projects">
         <i class="fas fa-layer-group mr-2" aria-hidden="true"></i> All
       </button>
@@ -896,49 +883,31 @@
       <button
         class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#14b8a6] hover:text-[#14b8a6] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#14b8a6] focus:ring-offset-2 focus:ring-offset-gray-900"
         data-filter="html" aria-pressed="false" aria-label="Filter projects by HTML">
-        <i class="fab fa-html5 text-[#14b8a6] mr-2" aria-hidden="true"></i> HTML
+        <i class="fas fa-project-diagram text-[#14b8a6] mr-2" aria-hidden="true"></i> Projects
       </button>
   
       <button
         class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#22d3ee] hover:text-[#22d3ee] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900"
         data-filter="css" aria-pressed="false" aria-label="Filter projects by CSS">
-        <i class="fab fa-css3-alt text-[#22d3ee] mr-2" aria-hidden="true"></i> CSS
+        <i class="fas fa-trophy text-[#22d3ee] mr-2" aria-hidden="true"></i> Awards & Honors
       </button>
   
       <button
         class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-teal-400 hover:text-teal-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-gray-900"
         data-filter="javascript" aria-pressed="false" aria-label="Filter projects by JavaScript">
-        <i class="fab fa-js text-yellow-400 mr-2" aria-hidden="true"></i> JavaScript
+        <i class="fas fa-microscope text-teal-400 mr-2" aria-hidden="true"></i> Experimental Equipments
       </button>
   
       <button
         class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#14b8a6] hover:text-[#14b8a6] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#14b8a6] focus:ring-offset-2 focus:ring-offset-gray-900"
         data-filter="java" aria-pressed="false" aria-label="Filter projects by Java">
-        <i class="fab fa-java text-[#14b8a6] mr-2" aria-hidden="true"></i> Java
+        <i class="fas fa-robot text-[#14b8a6] mr-2" aria-hidden="true"></i> Office Automations
       </button>
   
       <button
         class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#22d3ee] hover:text-[#22d3ee] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900"
         data-filter="c++" aria-pressed="false" aria-label="Filter projects by C++">
-        <i class="fas fa-code text-[#22d3ee] mr-2" aria-hidden="true"></i> C++
-      </button>
-  
-      <button
-        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#14b8a6] hover:text-[#14b8a6] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#14b8a6] focus:ring-offset-2 focus:ring-offset-gray-900"
-        data-filter="arduino" aria-pressed="false" aria-label="Filter projects by Arduino">
-        <i class="fas fa-microchip text-[#14b8a6] mr-2" aria-hidden="true"></i> Arduino
-      </button>
-  
-      <button
-        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#22d3ee] hover:text-[#22d3ee] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900"
-        data-filter="circuit" aria-pressed="false" aria-label="Filter projects by Circuit">
-        <i class="fas fa-bolt text-[#22d3ee] mr-2" aria-hidden="true"></i> Circuit
-      </button>
-  
-      <button
-        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-teal-400 hover:text-teal-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-gray-900"
-        data-filter="python" aria-pressed="false" aria-label="Filter projects by Python">
-        <i class="fab fa-python text-teal-400 mr-2" aria-hidden="true"></i> Python
+        <i class="fas fa-tools text-[#22d3ee] mr-2" aria-hidden="true"></i> Development Tools
       </button>
     </div>
   
@@ -947,6 +916,7 @@
         background: linear-gradient(to right, #14b8a6, #22d3ee);
         color: white !important;
         box-shadow: 0 0 15px rgba(20, 184, 166, 0.5);
+        border-color: transparent;
       }
     </style>
   
@@ -3745,10 +3715,10 @@
             <i class="fab fa-linkedin"></i>
             LinkedIn
           </a>
-          <a href="assets/resume.pdf" download
+          <a href="assets/cv.pdf" download
             class="px-6 py-3 bg-gray-800 hover:bg-[#22d3ee] border border-gray-700 hover:border-[#22d3ee] rounded-xl font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2">
             <i class="fas fa-download"></i>
-            Download Resume
+            Download CV
           </a>
         </div>
       </div>
@@ -3778,9 +3748,9 @@
             Get In Touch
             <span class="absolute inset-0 bg-gradient-to-r from-[#22d3ee] to-[#14b8a6] rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></span>
           </a>
-          <a href="assets/resume.pdf" download class="px-8 py-4 border-2 border-[#14b8a6] text-[#14b8a6] rounded-xl font-bold hover:bg-[#14b8a6] hover:text-white transition-all duration-300 hover:scale-105">
+          <a href="assets/cv.pdf" download class="px-8 py-4 border-2 border-[#14b8a6] text-[#14b8a6] rounded-xl font-bold hover:bg-[#14b8a6] hover:text-white transition-all duration-300 hover:scale-105">
             <i class="fas fa-download mr-2"></i>
-            Download Resume
+            Download CV
           </a>
         </div>
       </div>
@@ -3791,8 +3761,8 @@
         <!-- Brand & About -->
         <div class="text-center md:text-left">
           <div class="flex items-center justify-center md:justify-start gap-3 mb-4">
-            <img src="assets/logo.png" alt="Dhruv Thakar Logo" class="w-12 h-12 rounded-full border-2 border-[#14b8a6]" />
-            <h3 class="text-2xl font-bold animate-gradient">Dhruv Thakar</h3>
+            <img src="assets/logo.png" alt="Yoon JaeU Logo" class="w-12 h-12 rounded-full border-2 border-[#14b8a6]" />
+            <h3 class="text-2xl font-bold animate-gradient">Yoon JaeU</h3>
           </div>
           <p class="text-gray-400 mb-4 leading-relaxed">
             Computer Science student passionate about building innovative solutions and contributing to the tech community.
@@ -3863,7 +3833,7 @@
             </div>
           </div>
           <p class="text-xs text-gray-500 mt-4">
-            <i class="fas fa-code text-[#14b8a6]"></i> Designed & Built by Dhruv Thakar
+            <i class="fas fa-code text-[#14b8a6]"></i> Designed & Built by Yoon JaeU
           </p>
           <p class="text-xs text-gray-500 mt-1">
             <i class="fas fa-calendar-alt text-[#22d3ee]"></i> Last updated: November 2025
@@ -3915,7 +3885,7 @@
       <!-- Bottom Bar -->
       <div class="flex flex-col md:flex-row justify-between items-center gap-4">
         <div class="text-sm text-gray-500 text-center md:text-left">
-          <p>© 2025 Dhruv Thakar. All rights reserved.</p>
+          <p>© 2025 Yoon JaeU. All rights reserved.</p>
           <p class="text-xs mt-1">Made with <i class="fas fa-heart text-red-500 animate-pulse"></i> and <i class="fas fa-coffee text-[#14b8a6]"></i></p>
         </div>
         
@@ -4004,23 +3974,27 @@
       const sections = document.querySelectorAll('section[id]');
       const navLinks = document.querySelectorAll('.nav-link');
       
-      window.addEventListener('scroll', function() {
+      function highlightNavigation() {
         let current = '';
         sections.forEach(section => {
           const sectionTop = section.offsetTop;
           const sectionHeight = section.clientHeight;
-          if (window.scrollY >= sectionTop - 100) {
+          if (window.scrollY >= sectionTop - 150) {
             current = section.getAttribute('id');
           }
         });
         
         navLinks.forEach(link => {
           link.classList.remove('active-link');
-          if (link.getAttribute('href') === '#' + current) {
+          const href = link.getAttribute('href');
+          if (href === '#' + current || (current === 'home' && href === '#top')) {
             link.classList.add('active-link');
           }
         });
-      });
+      }
+
+      window.addEventListener('scroll', highlightNavigation);
+      highlightNavigation();
     });
   </script>
   
