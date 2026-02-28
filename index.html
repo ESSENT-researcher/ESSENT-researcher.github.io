@@ -695,7 +695,7 @@
           <!-- Profile Image & CTA -->
           <div class="md:col-span-2 flex flex-col items-center">
             <!-- Profile Image with Frame -->
-            <div class="relative mb-8 group">
+            <div class="relative mb-4 group">
               <div
                 class="absolute -inset-1 bg-gradient-to-r from-[#22d3ee] to-[#14b8a6] rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200">
               </div>
@@ -705,9 +705,9 @@
             </div>
 
             <!-- Quick Info Cards -->
-            <div class="w-full space-y-3 mb-6">
+            <div class="w-full space-y-2 mb-4">
               <div
-                class="bg-gray-800/50 backdrop-blur-sm p-4 rounded-xl border border-gray-700 hover:border-[#22d3ee] transition-all">
+                class="bg-gray-800/50 backdrop-blur-sm p-2 rounded-xl border border-gray-700 hover:border-[#22d3ee] transition-all">
                 <div class="flex items-center gap-3">
                   <i class="fas fa-graduation-cap text-2xl text-[#22d3ee]"></i>
                   <div>
@@ -718,7 +718,7 @@
               </div>
 
               <div
-                class="bg-gray-800/50 backdrop-blur-sm p-4 rounded-xl border border-gray-700 hover:border-[#14b8a6] transition-all">
+                class="bg-gray-800/50 backdrop-blur-sm p-2 rounded-xl border border-gray-700 hover:border-[#14b8a6] transition-all">
                 <div class="flex items-center gap-3">
                   <i class="fas fa-map-marker-alt text-2xl text-[#14b8a6]"></i>
                   <div>
@@ -729,7 +729,7 @@
               </div>
 
               <div
-                class="bg-gray-800/50 backdrop-blur-sm p-4 rounded-xl border border-gray-700 hover:border-[#22d3ee] transition-all">
+                class="bg-gray-800/50 backdrop-blur-sm p-2 rounded-xl border border-gray-700 hover:border-[#22d3ee] transition-all">
                 <div class="flex items-center gap-3">
                   <i class="fas fa-envelope text-2xl text-[#22d3ee]"></i>
                   <div>
@@ -741,22 +741,22 @@
             </div>
 
             <!-- CTA Buttons -->
-            <div class="w-full space-y-3">
+            <div class="w-full space-y-2">
               <a href="assets/Yoon JaeU's cirriculm vitae.pdf" target="_blank" rel="noopener noreferrer"
-                class="block w-full bg-gradient-to-r from-[#22d3ee] to-[#14b8a6] hover:from-[#06b6d4] hover:to-[#0d9488] text-[#0f172a] font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(34,211,238,0.5)] focus:outline-none focus:ring-2 focus:ring-[#22d3ee] text-center"
+                class="block w-full bg-gradient-to-r from-[#22d3ee] to-[#14b8a6] hover:from-[#06b6d4] hover:to-[#0d9488] text-[#0f172a] font-bold py-2 px-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(34,211,238,0.5)] focus:outline-none focus:ring-2 focus:ring-[#22d3ee] text-center"
                 aria-label="Download Yoon JaeU's curriculum vitae (PDF, opens in new tab)">
                 <i class="fas fa-download mr-2" aria-hidden="true"></i> Download CV
               </a>
 
               <a href="#contact"
-                class="block w-full bg-transparent border-2 border-[#22d3ee] text-[#22d3ee] hover:bg-[#22d3ee] hover:text-[#0f172a] font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] text-center">
+                class="block w-full bg-transparent border-2 border-[#22d3ee] text-[#22d3ee] hover:bg-[#22d3ee] hover:text-[#0f172a] font-bold py-2 px-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] text-center">
                 <i class="fas fa-paper-plane mr-2" aria-hidden="true"></i> Get In Touch
               </a>
             </div>
           </div>
 
           <!-- About Content -->
-          <div class="md:col-span-3 space-y-6">
+          <div class="md:col-span-3 flex flex-col h-full">
 
             <!-- Tab Navigation -->
             <div class="flex flex-wrap gap-2 mb-6 border-b border-gray-700 pb-4">
@@ -778,7 +778,7 @@
             </div>
 
             <!-- Tab Content -->
-            <div class="tab-content-container">
+            <div class="tab-content-container flex-1 flex flex-col justify-center">
 
               <!-- My Story Tab -->
               <div class="tab-content active" id="story-tab">
@@ -825,74 +825,80 @@
                 <div class="grid sm:grid-cols-2 gap-4">
 
                   <div
-                    class="bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#22d3ee] transition-all hover:scale-105">
-                    <div class="flex items-start gap-3">
-                      <i class="fas fa-battery text-3xl text-[#22d3ee]"></i>
-                      <div>
-                        <h4 class="font-bold text-white mb-2">Battery</h4>
-                        <p class="text-sm text-gray-400">Developing and optimizing advanced materials to accelerate the
-                          next generation of high-performance, sustainable battery technologies.</p>
-                      </div>
+                    class="flex items-start gap-3 bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#22d3ee] transition-all hover:scale-105 h-full min-h-[175px]">
+                    <div
+                      class="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full flex items-center justify-center text-lg">
+                      <i class="fas fa-battery-full text-white"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-white mb-1">Battery</h4>
+                      <p class="text-sm text-gray-400">Developing and optimizing advanced materials to accelerate the
+                        next generation of high-performance, sustainable battery technologies.</p>
                     </div>
                   </div>
 
                   <div
-                    class="bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#14b8a6] transition-all hover:scale-105">
-                    <div class="flex items-start gap-3">
-                      <i class="fas fa-computer text-3xl text-[#14b8a6]"></i>
-                      <div>
-                        <h4 class="font-bold text-white mb-2">AI</h4>
-                        <p class="text-sm text-gray-400">Leveraging Machine Learning and computational modeling to
-                          predict material behaviors and discover optimal synthesis conditions.</p>
-                      </div>
+                    class="flex items-start gap-3 bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#14b8a6] transition-all hover:scale-105 h-full min-h-[175px]">
+                    <div
+                      class="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-teal-500 to-emerald-400 rounded-full flex items-center justify-center text-lg">
+                      <i class="fas fa-computer text-white"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-white mb-1">AI</h4>
+                      <p class="text-sm text-gray-400">Leveraging Machine Learning and computational modeling to
+                        predict material behaviors and discover optimal synthesis conditions.</p>
                     </div>
                   </div>
 
                   <div
-                    class="bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#22d3ee] transition-all hover:scale-105">
-                    <div class="flex items-start gap-3">
-                      <i class="fas fa-flask text-3xl text-[#22d3ee]"></i>
-                      <div>
-                        <h4 class="font-bold text-white mb-2">Electrochemistry</h4>
-                        <p class="text-sm text-gray-400">Analyzing electrochemical performance and mechanisms of energy
-                          storage materials to enhance battery life and efficiency.</p>
-                      </div>
+                    class="flex items-start gap-3 bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#22d3ee] transition-all hover:scale-105 h-full min-h-[175px]">
+                    <div
+                      class="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-400 rounded-full flex items-center justify-center text-lg">
+                      <i class="fas fa-flask text-white"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-white mb-1">Electrochemistry</h4>
+                      <p class="text-sm text-gray-400">Analyzing electrochemical performance and mechanisms of energy
+                        storage materials to enhance battery life and efficiency.</p>
                     </div>
                   </div>
 
                   <div
-                    class="bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#14b8a6] transition-all hover:scale-105">
-                    <div class="flex items-start gap-3">
-                      <i class="fas fa-brain text-3xl text-[#14b8a6]"></i>
-                      <div>
-                        <h4 class="font-bold text-white mb-2">Problem solving</h4>
-                        <p class="text-sm text-gray-400">Overcoming experimental limitations by independently designing
-                          and fabricating custom lab equipment.</p>
-                      </div>
+                    class="flex items-start gap-3 bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#14b8a6] transition-all hover:scale-105 h-full min-h-[175px]">
+                    <div
+                      class="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-400 rounded-full flex items-center justify-center text-lg">
+                      <i class="fas fa-brain text-white"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-white mb-1">Problem solving</h4>
+                      <p class="text-sm text-gray-400">Overcoming experimental limitations by independently designing
+                        and fabricating custom lab equipment.</p>
                     </div>
                   </div>
 
                   <div
-                    class="bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#22d3ee] transition-all hover:scale-105">
-                    <div class="flex items-start gap-3">
-                      <i class="fas fa-sun text-3xl text-[#22d3ee]"></i>
-                      <div>
-                        <h4 class="font-bold text-white mb-2">Solar cell</h4>
-                        <p class="text-sm text-gray-400">Fabricating thin-film solar cells via electrodeposition and
-                          meticulously optimizing compex experimental parameters for higher efficiency.</p>
-                      </div>
+                    class="flex items-start gap-3 bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#22d3ee] transition-all hover:scale-105 h-full min-h-[175px]">
+                    <div
+                      class="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-orange-500 to-yellow-400 rounded-full flex items-center justify-center text-lg">
+                      <i class="fas fa-sun text-white"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-white mb-1">Solar cell</h4>
+                      <p class="text-sm text-gray-400">Fabricating thin-film solar cells via electrodeposition and
+                        meticulously optimizing compex experimental parameters for higher efficiency.</p>
                     </div>
                   </div>
 
                   <div
-                    class="bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#14b8a6] transition-all hover:scale-105">
-                    <div class="flex items-start gap-3">
-                      <i class="fas fa-fire text-3xl text-[#14b8a6]"></i>
-                      <div>
-                        <h4 class="font-bold text-white mb-2">Relentless mind</h4>
-                        <p class="text-sm text-gray-400">Tackling experimental errors head-on by engineering custom
-                          3D-printed lab equipment and persistently pursuing optimal results.</p>
-                      </div>
+                    class="flex items-start gap-3 bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#14b8a6] transition-all hover:scale-105 h-full min-h-[175px]">
+                    <div
+                      class="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-red-500 to-orange-400 rounded-full flex items-center justify-center text-lg">
+                      <i class="fas fa-fire text-white"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-white mb-1">Relentless mind</h4>
+                      <p class="text-sm text-gray-400">Tackling experimental errors head-on by engineering custom
+                        3D-printed lab equipment and persistently pursuing optimal results.</p>
                     </div>
                   </div>
 
@@ -901,12 +907,12 @@
 
               <!-- Fun Facts Tab -->
               <div class="tab-content hidden" id="facts-tab">
-                <div class="space-y-4">
+                <div class="grid sm:grid-cols-2 gap-4">
 
                   <div
-                    class="flex items-start gap-4 bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#22d3ee] transition-all">
+                    class="flex items-start gap-3 bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#22d3ee] transition-all hover:scale-105 h-full min-h-[175px]">
                     <div
-                      class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full flex items-center justify-center text-2xl">
+                      class="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full flex items-center justify-center text-lg">
                       <i class="fas fa-robot text-white"></i>
                     </div>
                     <div>
@@ -916,9 +922,9 @@
                   </div>
 
                   <div
-                    class="flex items-start gap-4 bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#14b8a6] transition-all">
+                    class="flex items-start gap-3 bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#14b8a6] transition-all hover:scale-105 h-full min-h-[175px]">
                     <div
-                      class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-400 rounded-full flex items-center justify-center text-2xl">
+                      class="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-emerald-500 to-green-400 rounded-full flex items-center justify-center text-lg">
                       <i class="fas fa-microscope text-white"></i>
                     </div>
                     <div>
@@ -929,9 +935,9 @@
                   </div>
 
                   <div
-                    class="flex items-start gap-4 bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#22d3ee] transition-all">
+                    class="flex items-start gap-3 bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#22d3ee] transition-all hover:scale-105 h-full min-h-[175px]">
                     <div
-                      class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-gray-500 to-slate-400 rounded-full flex items-center justify-center text-2xl">
+                      class="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-gray-500 to-slate-400 rounded-full flex items-center justify-center text-lg">
                       <i class="fas fa-desktop text-white"></i>
                     </div>
                     <div>
@@ -941,9 +947,9 @@
                   </div>
 
                   <div
-                    class="flex items-start gap-4 bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#14b8a6] transition-all">
+                    class="flex items-start gap-3 bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#14b8a6] transition-all hover:scale-105 h-full min-h-[175px]">
                     <div
-                      class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-orange-500 to-amber-400 rounded-full flex items-center justify-center text-2xl">
+                      class="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-orange-500 to-amber-400 rounded-full flex items-center justify-center text-lg">
                       <i class="fas fa-bicycle text-white"></i>
                     </div>
                     <div>
@@ -953,9 +959,9 @@
                   </div>
 
                   <div
-                    class="flex items-start gap-4 bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#22d3ee] transition-all">
+                    class="flex items-start gap-3 bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#22d3ee] transition-all hover:scale-105 h-full min-h-[175px]">
                     <div
-                      class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-violet-500 to-purple-400 rounded-full flex items-center justify-center text-2xl">
+                      class="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-violet-500 to-purple-400 rounded-full flex items-center justify-center text-lg">
                       <i class="fas fa-headphones text-white"></i>
                     </div>
                     <div>
@@ -965,9 +971,9 @@
                   </div>
 
                   <div
-                    class="flex items-start gap-4 bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#14b8a6] transition-all">
+                    class="flex items-start gap-3 bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-[#14b8a6] transition-all hover:scale-105 h-full min-h-[175px]">
                     <div
-                      class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-rose-500 to-red-400 rounded-full flex items-center justify-center text-2xl">
+                      class="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-rose-500 to-red-400 rounded-full flex items-center justify-center text-lg">
                       <i class="fas fa-compass text-white"></i>
                     </div>
                     <div>
@@ -2242,7 +2248,12 @@
                 <div class="flex gap-1 h-3">
                   <div class="flex-1 bg-blue-600 rounded-l-full"></div>
                   <div class="flex-1 bg-blue-500"></div>
-                  <div class="flex-1 bg-blue-400"></div>
+                  <div class="flex-1 bg-indigo-500 relative group cursor-help">
+                    <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max px-2 py-1 bg-indigo-600 text-white text-[10px] font-bold rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
+                      Yonsei Exchange (2022-1)
+                      <div class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-indigo-600"></div>
+                    </div>
+                  </div>
                   <div class="flex-1 bg-cyan-500"></div>
                   <div class="flex-1 bg-cyan-400"></div>
                   <div class="flex-1 bg-teal-500"></div>
@@ -2276,6 +2287,93 @@
                   <span
                     class="bg-purple-500/20 text-purple-400 px-4 py-2 rounded-full text-sm font-semibold border border-purple-500/30 hover:bg-purple-500/30 transition-colors cursor-default">
                     Solar Cell Devices
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Yonsei University Exchange Card -->
+        <div
+          class="group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 md:p-12 rounded-3xl shadow-2xl border border-indigo-500/20 hover:border-indigo-400/50 hover:shadow-[0_0_40px_rgba(99,102,241,0.4)] transition-all duration-500 hover:scale-[1.01] mb-12">
+
+          <!-- Exchange Student Badge -->
+          <div class="absolute -top-4 left-8">
+            <span
+              class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg flex items-center gap-2">
+              <i class="fas fa-plane-departure"></i>
+              Academic Exchange
+            </span>
+          </div>
+
+          <div class="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
+
+            <!-- Logo -->
+            <div class="relative flex-shrink-0">
+              <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl blur-xl"></div>
+              <img src="assets/yonsei_logo.png" alt="Yonsei University Logo"
+                class="relative w-[180px] h-[180px] rounded-2xl object-contain border-2 border-indigo-500/30 bg-white p-1 shadow-2xl group-hover:scale-110 transition-transform duration-300"
+                loading="lazy" />
+            </div>
+
+            <!-- Content -->
+            <div class="flex-1 text-center md:text-left space-y-4">
+              <!-- University Name -->
+              <div>
+                <h3 class="text-3xl font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+                  Yonsei University
+                </h3>
+                <p
+                  class="text-xl font-semibold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                  Exchange Student in Materials Science & Engineering
+                </p>
+              </div>
+
+              <!-- Location & Timeline -->
+              <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm text-gray-400">
+                <span class="flex items-center gap-2">
+                  <i class="fas fa-map-marker-alt text-indigo-400"></i>
+                  Seoul, South Korea
+                </span>
+                <span class="flex items-center gap-2">
+                  <i class="fas fa-calendar-alt text-purple-400"></i>
+                  Mar 2022 - Aug 2022
+                </span>
+              </div>
+
+              <!-- Progress Bar -->
+              <div class="space-y-2">
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-400">Program Status</span>
+                  <span class="text-indigo-400 font-semibold">Completed (1 Semester)</span>
+                </div>
+                <div class="h-3 bg-gray-700/50 rounded-full overflow-hidden">
+                  <div class="h-full w-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"></div>
+                </div>
+              </div>
+
+              <!-- Description -->
+              <p class="text-gray-300 leading-relaxed">
+                Selected for an academic exchange program to broaden research perspectives. Engaged in advanced coursework related to Thermodynamics of Materials, Materials Science, and Solid State Chemistry, fostering cross-cultural collaboration and adaptability.
+              </p>
+
+              <!-- Key Focus Areas -->
+              <div class="pt-4">
+                <h4 class="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wide">Key Focus Areas</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-indigo-500/20 text-indigo-400 px-4 py-2 rounded-full text-sm font-semibold border border-indigo-500/30 hover:bg-indigo-500/30 transition-colors cursor-default">
+                    Thermodynamics of Materials
+                  </span>
+                  <span
+                    class="bg-purple-500/20 text-purple-400 px-4 py-2 rounded-full text-sm font-semibold border border-purple-500/30 hover:bg-purple-500/30 transition-colors cursor-default">
+                    Materials Science
+                  </span>
+                  <span
+                    class="bg-pink-500/20 text-pink-400 px-4 py-2 rounded-full text-sm font-semibold border border-pink-500/30 hover:bg-pink-500/30 transition-colors cursor-default">
+                    Solid State Chemistry
                   </span>
                 </div>
               </div>
