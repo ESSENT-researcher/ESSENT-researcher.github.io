@@ -227,7 +227,7 @@ class SmoothScroller {
   }
 
   init() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('a[href^="#"]:not(#modal-pdf-btn)').forEach(anchor => {
       anchor.addEventListener('click', (e) => {
         e.preventDefault();
         const target = document.querySelector(anchor.getAttribute('href'));
@@ -829,7 +829,7 @@ function initProjectModals() {
   const modal = document.getElementById('project-modal');
   const closeBtn = document.getElementById('modal-close');
   const closeBtnFooter = document.getElementById('modal-close-btn');
-  const pdfBtn = document.getElementById('modal-pdf-btn');
+  let pdfBtn = document.getElementById('modal-pdf-btn');
   const backdrop = document.getElementById('modal-backdrop');
   
   if (!modal || !cards.length) return;
@@ -859,12 +859,18 @@ function initProjectModals() {
     // Handle PDF button
     if (pdfLink && pdfBtn) {
       console.log('Setting PDF link:', pdfLink); // Debug log
+      
+      // Clone button to remove any existing event listeners (fix for preventDefault issues)
+      const newPdfBtn = pdfBtn.cloneNode(true);
+      pdfBtn.parentNode.replaceChild(newPdfBtn, pdfBtn);
+      pdfBtn = newPdfBtn; // Update reference
+      
       pdfBtn.href = pdfLink;
       pdfBtn.classList.remove('hidden');
       pdfBtn.setAttribute('target', '_blank');
     } else if (pdfBtn) {
       pdfBtn.classList.add('hidden');
-      pdfBtn.href = '#';
+      pdfBtn.href = 'javascript:void(0)';
       pdfBtn.removeAttribute('target');
     }
     
