@@ -313,7 +313,6 @@ document.addEventListener('DOMContentLoaded', () => {
           matchCount++;
           if (matchCount <= visibleCount) {
             card.style.display = 'block';
-            // Only animate if it wasn't already visible to avoid flickering on load more
             if (card.style.animation === '') {
                card.style.animation = 'none';
                card.offsetHeight; /* trigger reflow */
@@ -651,6 +650,9 @@ window.addEventListener('load', () => {
     
     // Counter animation
     initCounters();
+
+    // Project Modals
+    initProjectModals();
   }, 800);
 });
 
@@ -819,4 +821,64 @@ function initCounters() {
   });
   
   console.log('Counters initialized successfully!');
+}
+
+// ================= PROJECT MODALS =================
+function initProjectModals() {
+  const cards = document.querySelectorAll('.project-card');
+  const modal = document.getElementById('project-modal');
+  const closeBtn = document.getElementById('modal-close');
+  const closeBtnFooter = document.getElementById('modal-close-btn');
+  const pdfBtn = document.getElementById('modal-pdf-btn');
+  const backdrop = document.getElementById('modal-backdrop');
+  
+  if (!modal || !cards.length) return;
+
+  const openModal = (card) => {
+    // Extract data
+    const title = card.querySelector('h3').textContent.trim();
+    const description = card.querySelector('p').textContent.trim();
+    const pdfLink = card.getAttribute('data-pdf');
+    // Clone the icon div to preserve styles
+    const iconDiv = card.querySelector('.text-6xl').cloneNode(true);
+    iconDiv.classList.remove('text-6xl');
+    iconDiv.classList.add('text-4xl'); // Adjust size for modal
+    
+    const featuresList = card.querySelector('ul').innerHTML;
+    
+    // Populate modal
+    document.getElementById('modal-title').textContent = title;
+    document.getElementById('modal-description').textContent = description;
+    
+    const iconContainer = document.getElementById('modal-icon-container');
+    iconContainer.innerHTML = '';
+    iconContainer.appendChild(iconDiv);
+    
+    document.getElementById('modal-features').innerHTML = featuresList;
+
+    // Handle PDF button
+    if (pdfLink && pdfBtn) {
+      pdfBtn.href = pdfLink;
+      pdfBtn.classList.remove('hidden');
+    } else if (pdfBtn) {
+      pdfBtn.classList.add('hidden');
+      pdfBtn.href = '#';
+    }
+    
+    // Show modal
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden'; // Prevent scrolling
+  };
+
+  const closeModal = () => {
+    modal.classList.add('hidden');
+    document.body.style.overflow = ''; // Restore scrolling
+  };
+
+  // Event Listeners
+  cards.forEach(card => {
+    card.addEventListener('click', () => openModal(card));
+  });
+
+  [closeBtn, closeBtnFooter, backdrop].forEach(el => el?.addEventListener('click', closeModal));
 }
