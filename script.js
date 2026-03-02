@@ -858,11 +858,14 @@ function initProjectModals() {
 
     // Handle PDF button
     if (pdfLink && pdfBtn) {
+      console.log('Setting PDF link:', pdfLink); // Debug log
       pdfBtn.href = pdfLink;
       pdfBtn.classList.remove('hidden');
+      pdfBtn.setAttribute('target', '_blank');
     } else if (pdfBtn) {
       pdfBtn.classList.add('hidden');
       pdfBtn.href = '#';
+      pdfBtn.removeAttribute('target');
     }
     
     // Show modal
