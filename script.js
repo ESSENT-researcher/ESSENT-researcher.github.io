@@ -294,11 +294,61 @@ document.addEventListener('DOMContentLoaded', () => {
   // Project Filtering Logic with accessibility
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    const loadMoreContainer = document.getElementById('load-more-container');
+    
+    const ITEMS_PER_PAGE = 6;
+    let visibleCount = ITEMS_PER_PAGE;
+    let currentFilter = 'all';
+
+    function filterProjects() {
+      let matchCount = 0;
+      let hiddenCount = 0;
+
+      projectCards.forEach(card => {
+        const categories = card.getAttribute('data-category').split(' ');
+        const matches = currentFilter === 'all' || categories.includes(currentFilter);
+
+        if (matches) {
+          matchCount++;
+          if (matchCount <= visibleCount) {
+            card.style.display = 'block';
+            // Only animate if it wasn't already visible to avoid flickering on load more
+            if (card.style.animation === '') {
+               card.style.animation = 'none';
+               card.offsetHeight; /* trigger reflow */
+               card.style.animation = 'fadeInUp 0.5s ease-out forwards';
+            }
+          } else {
+            card.style.display = 'none';
+            hiddenCount++;
+          }
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (loadMoreContainer) {
+        if (hiddenCount > 0) {
+          loadMoreContainer.classList.remove('hidden');
+        } else {
+          loadMoreContainer.classList.add('hidden');
+        }
+      }
+    }
 
     if (filterButtons.length && projectCards.length) {
+      // Initialize
+      const activeBtn = document.querySelector('.filter-btn.active');
+      if (activeBtn) {
+        currentFilter = activeBtn.getAttribute('data-filter');
+      }
+      filterProjects();
+
       filterButtons.forEach(btn => {
         btn.addEventListener('click', function () {
-          const filter = this.getAttribute('data-filter');
+          currentFilter = this.getAttribute('data-filter');
+          visibleCount = ITEMS_PER_PAGE; // Reset on filter change
         
         // Update ARIA states
         filterButtons.forEach(b => {
@@ -308,18 +358,25 @@ document.addEventListener('DOMContentLoaded', () => {
         this.classList.add('active');
         this.setAttribute('aria-pressed', 'true');
         
-        // Filter cards with animation
-          projectCards.forEach(card => {
-            const categories = card.getAttribute('data-category').split(' ');
-            if (filter === 'all' || categories.includes(filter)) {
-              card.style.display = 'block';
-            card.style.animation = 'fadeIn 0.3s ease-in';
-            } else {
-              card.style.display = 'none';
-            }
-          });
+        // Reset animations for new filter
+        projectCards.forEach(card => card.style.animation = '');
+        
+        filterProjects();
         });
       });
+
+      if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', () => {
+          visibleCount += ITEMS_PER_PAGE;
+          filterProjects();
+          
+          // Smooth scroll down to reveal new items
+          window.scrollBy({
+            top: 500,
+            behavior: 'smooth'
+          });
+        });
+      }
     }
 
   // Active navigation highlighting

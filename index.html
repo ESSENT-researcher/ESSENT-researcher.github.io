@@ -138,12 +138,25 @@
     .project-card {
       opacity: 1;
       transform: translateY(0);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      /* Override Tailwind duration for faster hover response */
+      transition: all 0.2s ease-out !important;
+      cursor: pointer;
     }
 
     .project-card.animate-in {
       opacity: 1;
       transform: translateY(0);
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* Staggered animation delays */
@@ -686,7 +699,6 @@
           <h2 id="about-heading" class="text-4xl md:text-5xl font-extrabold animate-gradient mb-4">
             About Me
           </h2>
-          <p class="text-gray-400 text-lg">Get to know me better</p>
         </div>
 
         <!-- Main Content Grid -->
@@ -989,33 +1001,6 @@
           </div>
         </div>
 
-        <!-- Achievement Stats -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div
-            class="bg-gradient-to-br from-blue-500/10 to-blue-600/10 backdrop-blur-sm p-6 rounded-xl border border-blue-500/20 text-center hover:scale-105 transition-transform">
-            <div class="text-4xl font-bold text-[#22d3ee] mb-2 counter" data-target="6">0</div>
-            <div class="text-sm text-gray-400">Total projects</div>
-          </div>
-
-          <div
-            class="bg-gradient-to-br from-teal-500/10 to-teal-600/10 backdrop-blur-sm p-6 rounded-xl border border-teal-500/20 text-center hover:scale-105 transition-transform">
-            <div class="text-4xl font-bold text-[#14b8a6] mb-2 counter" data-target="5">0</div>
-            <div class="text-sm text-gray-400">Awards & Honors</div>
-          </div>
-
-          <div
-            class="bg-gradient-to-br from-purple-500/10 to-purple-600/10 backdrop-blur-sm p-6 rounded-xl border border-purple-500/20 text-center hover:scale-105 transition-transform">
-            <div class="text-4xl font-bold text-purple-400 mb-2 counter" data-target="9">0</div>
-            <div class="text-sm text-gray-400">Handling SW</div>
-          </div>
-
-          <div
-            class="bg-gradient-to-br from-yellow-500/10 to-yellow-600/10 backdrop-blur-sm p-6 rounded-xl border border-yellow-500/20 text-center hover:scale-105 transition-transform">
-            <div class="text-4xl font-bold text-yellow-400 mb-2 counter" data-target="8">0</div>
-            <div class="text-sm text-gray-400">Handling HW</div>
-          </div>
-        </div>
-
       </div>
     </section>
 
@@ -1038,20 +1023,17 @@
             </svg>
             <div class="h-1 w-12 bg-gradient-to-l from-transparent to-[#22d3ee] rounded-full"></div>
           </div>
-          <h2 id="projects-heading" class="text-5xl md:text-6xl font-extrabold mb-4 animate-gradient">
+          <h2 id="projects-heading" class="text-5xl md:text-6xl font-extrabold mb-4 animate-gradient pb-2">
             Portfolio Highlights
           </h2>
-          <p class="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
-            A comprehensive overview of my research projects, academic honors, and technical expertise in materials engineering.
-          </p>
         </div>
 
         <!-- Project Stats -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 max-w-4xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 max-w-6xl mx-auto">
           <div
             class="bg-gradient-to-br from-blue-500/10 to-blue-600/10 backdrop-blur-sm p-4 rounded-xl border border-blue-500/20 text-center hover:scale-105 transition-transform duration-300">
             <div class="text-3xl font-bold text-[#22d3ee] mb-1">6</div>
-            <div class="text-xs text-gray-400 uppercase tracking-wide">Total Projects</div>
+            <div class="text-xs text-gray-400 uppercase tracking-wide">Projects</div>
           </div>
           <div
             class="bg-gradient-to-br from-teal-500/10 to-teal-600/10 backdrop-blur-sm p-4 rounded-xl border border-teal-500/20 text-center hover:scale-105 transition-transform duration-300">
@@ -1061,53 +1043,47 @@
           <div
             class="bg-gradient-to-br from-purple-500/10 to-purple-600/10 backdrop-blur-sm p-4 rounded-xl border border-purple-500/20 text-center hover:scale-105 transition-transform duration-300">
             <div class="text-3xl font-bold text-purple-400 mb-1">17</div>
-            <div class="text-xs text-gray-400 uppercase tracking-wide">Handling SW & HW</div>
+            <div class="text-xs text-gray-400 uppercase tracking-wide">Tools</div>
           </div>
           <div
             class="bg-gradient-to-br from-yellow-500/10 to-yellow-600/10 backdrop-blur-sm p-4 rounded-xl border border-yellow-500/20 text-center hover:scale-105 transition-transform duration-300">
-            <div class="text-3xl font-bold text-yellow-400 mb-1">Feb.2026</div>
-            <div class="text-xs text-gray-400 uppercase tracking-wide">Latest Update</div>
+            <div class="text-3xl font-bold text-yellow-400 mb-1">3</div>
+            <div class="text-xs text-gray-400 uppercase tracking-wide">Conference Posters</div>
           </div>
         </div>
       </div>
 
       <!-- =========================== FILTER BUTTONS =========================== -->
-      <div id="filter-buttons" class="flex flex-wrap justify-center gap-3 mb-12" role="group"
+      <div id="filter-buttons" class="flex flex-wrap justify-center gap-2 mb-12" role="group"
         aria-label="Project filter options">
         <button
-          class="filter-btn active px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#14b8a6] hover:text-[#14b8a6] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#14b8a6] focus:ring-offset-2 focus:ring-offset-gray-900"
+          class="filter-btn active px-4 py-2 rounded-full text-xs md:text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#14b8a6] hover:text-[#14b8a6] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#14b8a6] focus:ring-offset-2 focus:ring-offset-gray-900"
           data-filter="all" aria-pressed="true" aria-label="Show all projects">
           <i class="fas fa-layer-group mr-2" aria-hidden="true"></i> All
         </button>
 
         <button
-          class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#14b8a6] hover:text-[#14b8a6] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#14b8a6] focus:ring-offset-2 focus:ring-offset-gray-900"
-          data-filter="html" aria-pressed="false" aria-label="Filter projects by HTML">
+          class="filter-btn px-4 py-2 rounded-full text-xs md:text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#14b8a6] hover:text-[#14b8a6] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#14b8a6] focus:ring-offset-2 focus:ring-offset-gray-900"
+          data-filter="project" aria-pressed="false" aria-label="Filter by Projects">
           <i class="fas fa-project-diagram text-[#14b8a6] mr-2" aria-hidden="true"></i> Projects
         </button>
 
         <button
-          class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#22d3ee] hover:text-[#22d3ee] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900"
-          data-filter="css" aria-pressed="false" aria-label="Filter projects by CSS">
+          class="filter-btn px-4 py-2 rounded-full text-xs md:text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#22d3ee] hover:text-[#22d3ee] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900"
+          data-filter="award" aria-pressed="false" aria-label="Filter by Awards & Honors">
           <i class="fas fa-trophy text-[#22d3ee] mr-2" aria-hidden="true"></i> Awards & Honors
         </button>
 
         <button
-          class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-teal-400 hover:text-teal-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-gray-900"
-          data-filter="javascript" aria-pressed="false" aria-label="Filter projects by JavaScript">
-          <i class="fas fa-microscope text-teal-400 mr-2" aria-hidden="true"></i> Experimental Tools
+          class="filter-btn px-4 py-2 rounded-full text-xs md:text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-teal-400 hover:text-teal-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-gray-900"
+          data-filter="tool" aria-pressed="false" aria-label="Filter by Tools">
+          <i class="fas fa-tools text-teal-400 mr-2" aria-hidden="true"></i> Tools
         </button>
 
         <button
-          class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#14b8a6] hover:text-[#14b8a6] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#14b8a6] focus:ring-offset-2 focus:ring-offset-gray-900"
-          data-filter="java" aria-pressed="false" aria-label="Filter projects by Java">
-          <i class="fas fa-robot text-[#14b8a6] mr-2" aria-hidden="true"></i> Office Automations
-        </button>
-
-        <button
-          class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#22d3ee] hover:text-[#22d3ee] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900"
-          data-filter="c++" aria-pressed="false" aria-label="Filter projects by C++">
-          <i class="fas fa-tools text-[#22d3ee] mr-2" aria-hidden="true"></i> Development Tools
+          class="filter-btn px-4 py-2 rounded-full text-xs md:text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-yellow-400 hover:text-yellow-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-gray-900"
+          data-filter="poster" aria-pressed="false" aria-label="Filter by Conference Posters">
+          <i class="fas fa-scroll text-yellow-400 mr-2" aria-hidden="true"></i> Conference Posters
         </button>
       </div>
 
@@ -1126,22 +1102,14 @@
         <!-- Project 1: Common Algorithms Library -->
         <div
           class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="java algorithms">
-
-          <!-- Featured Badge -->
-          <div class="absolute top-3 right-3 z-10">
-            <span
-              class="bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-3 py-1 rounded-full text-xs font-bold shadow-lg">
-              <i class="fas fa-star mr-1"></i>Featured
-            </span>
-          </div>
+          data-category="project">
 
           <!-- Project Icon/Thumbnail -->
           <div
             class="relative h-40 bg-gradient-to-br from-[#14b8a6]/20 to-[#22d3ee]/20 flex items-center justify-center overflow-hidden">
             <div
               class="text-6xl text-[#22d3ee] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-cogs"></i>
+              <i class="fas fa-solar-panel"></i>
             </div>
             <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
           </div>
@@ -1150,49 +1118,26 @@
           <div class="p-6">
             <h3
               class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Common Algorithms Library
+              Cu₂MnSnS₄ Thin Films for Solar Cells
             </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">A Java library of classic array-based algorithms built
-              for reusability and performance testing.</p>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">One-step electrodeposition of Cu<sub>2</sub>MnSnS<sub>4</sub> thin films on FTO glass for solar cell applications.</p>
 
             <div class="mb-4">
               <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
               <ul class="space-y-1 text-sm text-gray-400">
                 <li class="flex items-start">
                   <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Sorting: Selection, Insertion, Bubble</span>
+                  <span>One-step electrodeposition</span>
                 </li>
                 <li class="flex items-start">
                   <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Searching: Linear, Binary</span>
+                  <span>Thin film fabrication</span>
                 </li>
                 <li class="flex items-start">
                   <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Shuffling, Reversing, Merging</span>
+                  <span>Solar cell application</span>
                 </li>
               </ul>
-            </div>
-
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span
-                class="bg-[#14b8a6]/20 text-[#14b8a6] px-3 py-1 rounded-full text-xs font-semibold border border-[#14b8a6]/30">Java</span>
-              <span
-                class="bg-[#22d3ee]/20 text-[#22d3ee] px-3 py-1 rounded-full text-xs font-semibold border border-[#22d3ee]/30">Algorithms</span>
-              <span
-                class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs font-semibold border border-purple-500/30">Data
-                Structures</span>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="flex gap-2 pt-4 border-t border-gray-700/50">
-              <a href="#"
-                class="flex-1 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] hover:from-[#22d3ee] hover:to-[#14b8a6] text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center shadow-lg hover:shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
-                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
-              </a>
-              <a href="#"
-                class="flex-1 bg-gray-700/50 hover:bg-gray-600 text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center border border-gray-600 hover:border-gray-500">
-                <i class="fab fa-github mr-2"></i>Code
-              </a>
             </div>
           </div>
         </div>
@@ -1200,13 +1145,56 @@
         <!-- Project 2: iPhonePhone – Java OOP -->
         <div
           class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="java">
+          data-category="project">
 
           <!-- Project Icon/Thumbnail -->
           <div
             class="relative h-40 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center overflow-hidden">
             <div
               class="text-6xl text-blue-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-recycle"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Electro-refining for Metal Recovery
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Study on the electro-refining process for separation and recovery of valuable metals in waste resources.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Valuable metal recovery</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Electro-refining process</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Waste resource recycling</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Numeric Data GUI -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="project">
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-purple-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
               <i class="fas fa-mobile-alt"></i>
             </div>
             <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
@@ -1216,54 +1204,857 @@
           <div class="p-6">
             <h3
               class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              iPhonePhone – Java OOP
+              Foldable Display Reliability
             </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Simulates an iPhone using Java classes showcasing
-              encapsulation and method overriding.</p>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Reliability evaluation and lifetime modeling of foldable displays under mechanical stress.</p>
 
             <div class="mb-4">
               <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
               <ul class="space-y-1 text-sm text-gray-400">
                 <li class="flex items-start">
                   <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>App install/uninstall</span>
+                  <span>Reliability evaluation</span>
                 </li>
                 <li class="flex items-start">
                   <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Battery & flashlight control</span>
+                  <span>Lifetime modeling</span>
                 </li>
                 <li class="flex items-start">
                   <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Airplane mode simulation</span>
+                  <span>Foldable display analysis</span>
                 </li>
               </ul>
-            </div>
-
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span
-                class="bg-[#14b8a6]/20 text-[#14b8a6] px-3 py-1 rounded-full text-xs font-semibold border border-[#14b8a6]/30">Java</span>
-              <span
-                class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold border border-blue-500/30">OOP</span>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="flex gap-2 pt-4 border-t border-gray-700/50">
-              <a href="#"
-                class="flex-1 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] hover:from-[#22d3ee] hover:to-[#14b8a6] text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center shadow-lg hover:shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
-                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
-              </a>
-              <a href="#"
-                class="flex-1 bg-gray-700/50 hover:bg-gray-600 text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center border border-gray-600 hover:border-gray-500">
-                <i class="fab fa-github mr-2"></i>Code
-              </a>
             </div>
           </div>
         </div>
 
-        <!-- Project 3: Numeric Data GUI -->
+        <!-- Project 4: Personal Portfolio Website -->
         <div
           class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="java">
+          data-category="project">
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-[#14b8a6]/20 to-[#06b6d4]/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-[#22d3ee] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-cube"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Custom Teflon Housing Design
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Designed and machined a custom Teflon housing to standardize the exposed area of FTO glass during electrodeposition.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Standardized exposed area</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Custom Teflon machining</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Electrodeposition optimization</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Calculator -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="project">
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-yellow-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-cubes"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              3D-Printed Multi-Slot Holder
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Designed and 3D-printed a multi-slot custom holder to enable the batch ultrasonic cleaning of multiple FTO glass substrates.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Batch ultrasonic cleaning</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Custom 3D printing</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Multi-slot design</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: Contact Manager App -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="project">
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              EDL Computational Simulation
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Computational simulation to analyze electrolyte agitation effects on diffusion layer thickness within the Electrical Double Layer (EDL).</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Diffusion layer analysis</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Electrolyte agitation effect</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Visual Studio Code simulation</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 8c: Semester High Honor (Sep 2021) -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="award">
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-emerald-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-medal"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Semester High Honor (2021-2)
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Awarded to students with high achievements throughout the semester.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Top 5% of students</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Academic Excellence</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Sep 2021</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 8b: Semester High Honor (Mar 2023) -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="award">
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-emerald-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-medal"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Semester High Honor (2023-1)
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Awarded to students with high achievements throughout the semester.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Top 5% of students</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Academic Excellence</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Mar 2023</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 8: File Compression Tool -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="award">
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-emerald-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-medal"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Semester High Honor (2025-2)
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Awarded to students with high achievements throughout the semester.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Top 5% of students</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Academic Excellence</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Sep 2025</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 7: Airline Reservation System -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="award">
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-yellow-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Capstone Design Competition
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Reliability evaluation and lifetime modeling of foldable displays. (Prof. Eun-chae Jeon)</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>2nd Place Winner</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Team Leader & Presenter</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Dec 2025</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 9: Computer Science Quiz -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="award">
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-indigo-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-university"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Academic Exchange Scholarship
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Awarded to selected students for active participation in the academic exchange program.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Yonsei University</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Exchange Program</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Mar 2022</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experimental Tool 1: Potentiostat / Galvanostat -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Potentiostat / Galvanostat
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Electrochemical measurement system for analyzing reaction mechanisms and kinetics.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Cyclic Voltammetry (CV)</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Electrochemical Impedance Spectroscopy (EIS)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experimental Tool 2: SEM-EDS -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-microscope"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              SEM-EDS
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Scanning Electron Microscopy with Energy Dispersive Spectroscopy for surface and elemental analysis.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Surface morphology imaging</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Elemental composition analysis</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experimental Tool 3: XRD -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-layer-group"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              XRD
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">X-ray Diffraction for determining crystal structures and phase identification of materials.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Crystal structure analysis</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Phase identification</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experimental Tool 4: Electric Furnace -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-fire"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Electric Furnace
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">High-temperature furnace for heat treatment, sintering, and annealing of materials.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Heat treatment</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Sintering & Annealing</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experimental Tool 5: AFM -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-wave-square"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              AFM
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Atomic Force Microscopy for high-resolution surface topography imaging at the nanoscale.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Nanoscale imaging</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Surface roughness analysis</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experimental Tool 6: UV-Vis -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-eye"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              UV-Vis
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Ultraviolet-Visible Spectroscopy for analyzing optical properties and band gap energy.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Absorbance measurement</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Band gap calculation</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experimental Tool 7: AAS -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-atom"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              AAS
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Atomic Absorption Spectroscopy for quantitative determination of chemical elements.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Metal concentration analysis</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experimental Tool 8: Four-point probe -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-microchip"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Four-point probe
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Measuring electrical resistivity and sheet resistance of material thin films.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Sheet resistance measurement</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Office Automation 1: Microsoft Word -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-blue-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-file-word"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Microsoft Word
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Documentation, report writing, and thesis preparation.</p>
+          </div>
+        </div>
+
+        <!-- Office Automation 2: Microsoft PowerPoint -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-indigo-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-file-powerpoint"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Microsoft PowerPoint
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Creating professional presentations and visual aids for research findings.</p>
+          </div>
+        </div>
+
+        <!-- Office Automation 3: Microsoft Excel -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-blue-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-file-excel"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Microsoft Excel
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Data organization, statistical analysis, and visualization.</p>
+          </div>
+        </div>
+
+        <!-- Office Automation 4: Origin Pro -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-indigo-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Origin Pro
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Advanced data analysis and scientific graphing software.</p>
+          </div>
+        </div>
+
+        <!-- Development Tool 1: Visual Studio Code -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-purple-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Visual Studio Code
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Source code editor for Python, C++, and web development.</p>
+          </div>
+        </div>
+
+        <!-- Development Tool 2: Visual Studio -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-purple-500/20 to-indigo-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-purple-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Visual Studio
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Integrated Development Environment (IDE) for comprehensive software development.</p>
+          </div>
+        </div>
+
+        <!-- Development Tool 3: Antigravity -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-purple-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Antigravity
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Python module for exploring gravity simulation concepts.</p>
+          </div>
+        </div>
+
+        <!-- Development Tool 4: MATLAB -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
 
           <!-- Project Icon/Thumbnail -->
           <div
@@ -1279,534 +2070,23 @@
           <div class="p-6">
             <h3
               class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Numeric Data GUI
+              MATLAB
             </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Interactive GUI to perform math operations using Java
-              Swing.</p>
-
-            <div class="mb-4">
-              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
-              <ul class="space-y-1 text-sm text-gray-400">
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Prime & square detection</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Factorial, sum, reverse digits</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Trigonometric functions</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span
-                class="bg-[#14b8a6]/20 text-[#14b8a6] px-3 py-1 rounded-full text-xs font-semibold border border-[#14b8a6]/30">Java</span>
-              <span
-                class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs font-semibold border border-purple-500/30">Swing</span>
-              <span
-                class="bg-pink-500/20 text-pink-400 px-3 py-1 rounded-full text-xs font-semibold border border-pink-500/30">GUI</span>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="flex gap-2 pt-4 border-t border-gray-700/50">
-              <a href="#"
-                class="flex-1 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] hover:from-[#22d3ee] hover:to-[#14b8a6] text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center shadow-lg hover:shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
-                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
-              </a>
-              <a href="#"
-                class="flex-1 bg-gray-700/50 hover:bg-gray-600 text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center border border-gray-600 hover:border-gray-500">
-                <i class="fab fa-github mr-2"></i>Code
-              </a>
-            </div>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Numerical computing environment for data analysis and algorithm development.</p>
           </div>
         </div>
 
-        <!-- Project 4: Personal Portfolio Website -->
+        <!-- 3D Modeling 1: Autodesk AutoCAD -->
         <div
           class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="html css javascript">
-
-          <!-- New Badge -->
-          <div class="absolute top-3 right-3 z-10">
-            <span
-              class="bg-gradient-to-r from-green-400 to-emerald-500 text-gray-900 px-3 py-1 rounded-full text-xs font-bold shadow-lg animate-pulse">
-              <i class="fas fa-fire mr-1"></i>You're Here!
-            </span>
-          </div>
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-[#14b8a6]/20 to-[#06b6d4]/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-[#22d3ee] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-user-circle"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Personal Portfolio Website
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Responsive personal portfolio built with HTML,
-              Tailwind CSS, and JavaScript.</p>
-
-            <div class="mb-4">
-              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
-              <ul class="space-y-1 text-sm text-gray-400">
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Showcases projects, skills & timeline</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Uses Tailwind CSS for styling</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Responsive and interactive design</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span
-                class="bg-orange-500/20 text-orange-400 px-3 py-1 rounded-full text-xs font-semibold border border-orange-500/30">HTML</span>
-              <span
-                class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold border border-blue-500/30">CSS</span>
-              <span
-                class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-xs font-semibold border border-yellow-500/30">JavaScript</span>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="flex gap-2 pt-4 border-t border-gray-700/50">
-              <a href="#"
-                class="flex-1 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] hover:from-[#22d3ee] hover:to-[#14b8a6] text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center shadow-lg hover:shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
-                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
-              </a>
-              <a href="https://github.com/dhruvht612/Portfolio" target="_blank" rel="noopener noreferrer"
-                class="flex-1 bg-gray-700/50 hover:bg-gray-600 text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center border border-gray-600 hover:border-gray-500">
-                <i class="fab fa-github mr-2"></i>Code
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 5: Calculator -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="javascript css">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-yellow-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-square-root-alt"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Calculator
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">A feature-rich calculator supporting trigonometric
-              functions, square roots, and input history.</p>
-
-            <div class="mb-4">
-              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
-              <ul class="space-y-1 text-sm text-gray-400">
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Clean Tailwind layout</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Trigonometry & square root support</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>History tracking & keyboard input</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span
-                class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-xs font-semibold border border-yellow-500/30">JavaScript</span>
-              <span
-                class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold border border-blue-500/30">CSS</span>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="flex gap-2 pt-4 border-t border-gray-700/50">
-              <a href="#"
-                class="flex-1 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] hover:from-[#22d3ee] hover:to-[#14b8a6] text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center shadow-lg hover:shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
-                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
-              </a>
-              <a href="#"
-                class="flex-1 bg-gray-700/50 hover:bg-gray-600 text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center border border-gray-600 hover:border-gray-500">
-                <i class="fab fa-github mr-2"></i>Code
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 6: Contact Manager App -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="html javascript">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-address-book"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Contact Manager App
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">A CRUD-based web app to manage contacts—create, edit,
-              delete, and search.</p>
-
-            <div class="mb-4">
-              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
-              <ul class="space-y-1 text-sm text-gray-400">
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Local storage or backend support</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Responsive UI with form validation</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Search and filter functionality</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span
-                class="bg-orange-500/20 text-orange-400 px-3 py-1 rounded-full text-xs font-semibold border border-orange-500/30">HTML</span>
-              <span
-                class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-xs font-semibold border border-yellow-500/30">JavaScript</span>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="flex gap-2 pt-4 border-t border-gray-700/50">
-              <a href="#"
-                class="flex-1 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] hover:from-[#22d3ee] hover:to-[#14b8a6] text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center shadow-lg hover:shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
-                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
-              </a>
-              <a href="#"
-                class="flex-1 bg-gray-700/50 hover:bg-gray-600 text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center border border-gray-600 hover:border-gray-500">
-                <i class="fab fa-github mr-2"></i>Code
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 7: Airline Reservation System -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="python oop console">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-blue-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-plane"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Airline Reservation System
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Console-based airline reservation system in Python
-              using OOP principles.</p>
-
-            <div class="mb-4">
-              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
-              <ul class="space-y-1 text-sm text-gray-400">
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Book & cancel tickets with seat assignment</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Waitlist management</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Print formatted boarding passes</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span
-                class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold border border-blue-500/30">Python</span>
-              <span
-                class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs font-semibold border border-purple-500/30">OOP</span>
-              <span
-                class="bg-gray-600/40 text-gray-300 px-3 py-1 rounded-full text-xs font-semibold border border-gray-500/30">Console
-                App</span>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="flex gap-2 pt-4 border-t border-gray-700/50">
-              <a href="#"
-                class="flex-1 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] hover:from-[#22d3ee] hover:to-[#14b8a6] text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center shadow-lg hover:shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
-                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
-              </a>
-              <a href="#"
-                class="flex-1 bg-gray-700/50 hover:bg-gray-600 text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center border border-gray-600 hover:border-gray-500">
-                <i class="fab fa-github mr-2"></i>Code
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 8: File Compression Tool -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="java algorithms compression">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-green-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-file-archive"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              File Compression Tool (Huffman)
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Java-based file compression & decompression tool using
-              Huffman Coding.</p>
-
-            <div class="mb-4">
-              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
-              <ul class="space-y-1 text-sm text-gray-400">
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Compress & decompress text files</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Implements Huffman Coding algorithm</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Binary trees & priority queues</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span
-                class="bg-[#14b8a6]/20 text-[#14b8a6] px-3 py-1 rounded-full text-xs font-semibold border border-[#14b8a6]/30">Java</span>
-              <span
-                class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs font-semibold border border-green-500/30">Algorithms</span>
-              <span
-                class="bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full text-xs font-semibold border border-emerald-500/30">Huffman</span>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="flex gap-2 pt-4 border-t border-gray-700/50">
-              <a href="#"
-                class="flex-1 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] hover:from-[#22d3ee] hover:to-[#14b8a6] text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center shadow-lg hover:shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
-                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
-              </a>
-              <a href="#"
-                class="flex-1 bg-gray-700/50 hover:bg-gray-600 text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center border border-gray-600 hover:border-gray-500">
-                <i class="fab fa-github mr-2"></i>Code
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 9: Computer Science Quiz -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="python quiz console">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-indigo-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-question-circle"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Computer Science Quiz
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Interactive multiple-choice quiz in Python testing
-              core CS knowledge.</p>
-
-            <div class="mb-4">
-              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
-              <ul class="space-y-1 text-sm text-gray-400">
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>5 multiple-choice questions</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Instant feedback after each answer</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Final score with performance evaluation</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span
-                class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold border border-blue-500/30">Python</span>
-              <span
-                class="bg-indigo-500/20 text-indigo-400 px-3 py-1 rounded-full text-xs font-semibold border border-indigo-500/30">Quiz
-                App</span>
-              <span
-                class="bg-gray-600/40 text-gray-300 px-3 py-1 rounded-full text-xs font-semibold border border-gray-500/30">Console</span>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="flex gap-2 pt-4 border-t border-gray-700/50">
-              <a href="#"
-                class="flex-1 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] hover:from-[#22d3ee] hover:to-[#14b8a6] text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center shadow-lg hover:shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
-                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
-              </a>
-              <a href="#"
-                class="flex-1 bg-gray-700/50 hover:bg-gray-600 text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center border border-gray-600 hover:border-gray-500">
-                <i class="fab fa-github mr-2"></i>Code
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 10: Police Strobe-Style LED Flasher -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="electronics circuit">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-red-500/20 to-blue-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-red-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-lightbulb"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Police Strobe LED Circuit
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Electronics project using dual 555 timers to simulate
-              alternating red & blue police strobe lights.</p>
-
-            <div class="mb-4">
-              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
-              <ul class="space-y-1 text-sm text-gray-400">
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Dual 555 astable multivibrator</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Alternating red/blue LED strobe</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Timing control & multivibrators</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span
-                class="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-xs font-semibold border border-red-500/30">Electronics</span>
-              <span
-                class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold border border-blue-500/30">555
-                Timer</span>
-              <span
-                class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-xs font-semibold border border-yellow-500/30">LED
-                Control</span>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="flex gap-2 pt-4 border-t border-gray-700/50">
-              <a href="#"
-                class="flex-1 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] hover:from-[#22d3ee] hover:to-[#14b8a6] text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center shadow-lg hover:shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
-                <i class="fas fa-external-link-alt mr-2"></i>View Project
-              </a>
-              <a href="#"
-                class="flex-1 bg-gray-700/50 hover:bg-gray-600 text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center border border-gray-600 hover:border-gray-500">
-                <i class="fab fa-github mr-2"></i>Code
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 11: Sumo Bot Development & Competition -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="robotics embedded">
-
-          <!-- Hot Badge -->
-          <div class="absolute top-3 right-3 z-10">
-            <span
-              class="bg-gradient-to-r from-red-500 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
-              <i class="fas fa-trophy mr-1"></i>Competition
-            </span>
-          </div>
+          data-category="tool">
 
           <!-- Project Icon/Thumbnail -->
           <div
             class="relative h-40 bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center overflow-hidden">
             <div
               class="text-6xl text-orange-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-robot"></i>
+              <i class="fas fa-drafting-compass"></i>
             </div>
             <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
           </div>
@@ -1815,73 +2095,62 @@
           <div class="p-6">
             <h3
               class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Sumo Bot Competition
+              Autodesk AutoCAD
             </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Autonomous sumo robot built to detect, track, and push
-              opponents using strategic programming.</p>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Computer-aided design software for 2D and 3D modeling and drafting.</p>
+          </div>
+        </div>
+
+        <!-- Conference Poster 1 -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="poster">
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-yellow-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-scroll"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Conference Poster 1
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Research presentation on advanced materials at [Conference Name].</p>
 
             <div class="mb-4">
               <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
               <ul class="space-y-1 text-sm text-gray-400">
                 <li class="flex items-start">
                   <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Autonomous opponent detection</span>
+                  <span>Poster Presentation</span>
                 </li>
                 <li class="flex items-start">
                   <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Arduino embedded programming</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Sensor integration & decision logic</span>
+                  <span>Research Findings</span>
                 </li>
               </ul>
-            </div>
-
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span
-                class="bg-orange-500/20 text-orange-400 px-3 py-1 rounded-full text-xs font-semibold border border-orange-500/30">Robotics</span>
-              <span
-                class="bg-teal-500/20 text-teal-400 px-3 py-1 rounded-full text-xs font-semibold border border-teal-500/30">Arduino</span>
-              <span
-                class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs font-semibold border border-purple-500/30">C++</span>
-              <span
-                class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold border border-blue-500/30">Python</span>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="flex gap-2 pt-4 border-t border-gray-700/50">
-              <a href="#"
-                class="flex-1 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] hover:from-[#22d3ee] hover:to-[#14b8a6] text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center shadow-lg hover:shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
-                <i class="fas fa-external-link-alt mr-2"></i>View Project
-              </a>
-              <a href="#"
-                class="flex-1 bg-gray-700/50 hover:bg-gray-600 text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center border border-gray-600 hover:border-gray-500">
-                <i class="fab fa-github mr-2"></i>Code
-              </a>
             </div>
           </div>
         </div>
 
-        <!-- Project 12: C++ Game Engine (Placeholder) -->
+        <!-- Conference Poster 2 -->
         <div
           class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="c++">
-
-          <!-- Coming Soon Badge -->
-          <div class="absolute top-3 right-3 z-10">
-            <span
-              class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
-              <i class="fas fa-clock mr-1"></i>Coming Soon
-            </span>
-          </div>
+          data-category="poster">
 
           <!-- Project Icon/Thumbnail -->
           <div
-            class="relative h-40 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center overflow-hidden">
+            class="relative h-40 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center overflow-hidden">
             <div
-              class="text-6xl text-blue-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-gamepad"></i>
+              class="text-6xl text-yellow-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-scroll"></i>
             </div>
             <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
           </div>
@@ -1890,72 +2159,37 @@
           <div class="p-6">
             <h3
               class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              2D Game Engine in C++
+              Conference Poster 2
             </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Custom 2D game engine built from scratch in C++ with
-              SDL2, featuring physics, collision detection, and sprite rendering.</p>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Research presentation on advanced materials at [Conference Name].</p>
 
             <div class="mb-4">
-              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Planned Features</h4>
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
               <ul class="space-y-1 text-sm text-gray-400">
                 <li class="flex items-start">
                   <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Custom physics engine & collision system</span>
+                  <span>Poster Presentation</span>
                 </li>
                 <li class="flex items-start">
                   <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Sprite rendering & animation system</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Entity component system (ECS)</span>
+                  <span>Research Findings</span>
                 </li>
               </ul>
-            </div>
-
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span
-                class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold border border-blue-500/30">C++</span>
-              <span
-                class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs font-semibold border border-purple-500/30">SDL2</span>
-              <span
-                class="bg-pink-500/20 text-pink-400 px-3 py-1 rounded-full text-xs font-semibold border border-pink-500/30">Game
-                Dev</span>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="flex gap-2 pt-4 border-t border-gray-700/50">
-              <button disabled
-                class="flex-1 bg-gray-600/50 text-gray-400 px-4 py-2.5 rounded-lg text-xs font-bold cursor-not-allowed opacity-60">
-                <i class="fas fa-clock mr-2"></i>In Development
-              </button>
-              <button disabled
-                class="flex-1 bg-gray-700/50 text-gray-400 px-4 py-2.5 rounded-lg text-xs font-bold cursor-not-allowed border border-gray-600 opacity-60">
-                <i class="fab fa-github mr-2"></i>Coming Soon
-              </button>
             </div>
           </div>
         </div>
 
-        <!-- Project 13: Arduino Smart Home System (Placeholder) -->
+        <!-- Conference Poster 3 -->
         <div
           class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="arduino c++">
-
-          <!-- Coming Soon Badge -->
-          <div class="absolute top-3 right-3 z-10">
-            <span
-              class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
-              <i class="fas fa-hammer mr-1"></i>In Progress
-            </span>
-          </div>
+          data-category="poster">
 
           <!-- Project Icon/Thumbnail -->
           <div
-            class="relative h-40 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center overflow-hidden">
+            class="relative h-40 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center overflow-hidden">
             <div
-              class="text-6xl text-cyan-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-home"></i>
+              class="text-6xl text-yellow-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-scroll"></i>
             </div>
             <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
           </div>
@@ -1964,205 +2198,35 @@
           <div class="p-6">
             <h3
               class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Arduino Smart Home System
+              Conference Poster 3
             </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">IoT-based smart home automation system using Arduino,
-              featuring remote control via mobile app and voice commands.</p>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Research presentation on advanced materials at [Conference Name].</p>
 
             <div class="mb-4">
-              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Planned Features</h4>
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
               <ul class="space-y-1 text-sm text-gray-400">
                 <li class="flex items-start">
                   <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Temperature & humidity monitoring</span>
+                  <span>Poster Presentation</span>
                 </li>
                 <li class="flex items-start">
                   <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Automated lighting control</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Wi-Fi & mobile app integration</span>
+                  <span>Research Findings</span>
                 </li>
               </ul>
-            </div>
-
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span
-                class="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-xs font-semibold border border-cyan-500/30">Arduino</span>
-              <span
-                class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold border border-blue-500/30">IoT</span>
-              <span
-                class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs font-semibold border border-green-500/30">ESP8266</span>
-              <span
-                class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs font-semibold border border-purple-500/30">C++</span>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="flex gap-2 pt-4 border-t border-gray-700/50">
-              <button disabled
-                class="flex-1 bg-gray-600/50 text-gray-400 px-4 py-2.5 rounded-lg text-xs font-bold cursor-not-allowed opacity-60">
-                <i class="fas fa-tools mr-2"></i>In Development
-              </button>
-              <button disabled
-                class="flex-1 bg-gray-700/50 text-gray-400 px-4 py-2.5 rounded-lg text-xs font-bold cursor-not-allowed border border-gray-600 opacity-60">
-                <i class="fab fa-github mr-2"></i>Coming Soon
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 14: Arduino Weather Station (Placeholder) -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="arduino circuit c++">
-
-          <!-- Coming Soon Badge -->
-          <div class="absolute top-3 right-3 z-10">
-            <span
-              class="bg-gradient-to-r from-green-500 to-teal-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
-              <i class="fas fa-lightbulb mr-1"></i>Planned
-            </span>
-          </div>
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-green-500/20 to-teal-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-green-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-cloud-sun"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Arduino Weather Station
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Multi-sensor weather monitoring station with Arduino,
-              displaying real-time data on LCD and cloud dashboard.</p>
-
-            <div class="mb-4">
-              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Planned Features</h4>
-              <ul class="space-y-1 text-sm text-gray-400">
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>DHT22 temperature & humidity sensor</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>BMP180 pressure & altitude tracking</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>LCD display & cloud data logging</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span
-                class="bg-teal-500/20 text-teal-400 px-3 py-1 rounded-full text-xs font-semibold border border-teal-500/30">Arduino</span>
-              <span
-                class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs font-semibold border border-green-500/30">Sensors</span>
-              <span
-                class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold border border-blue-500/30">C++</span>
-              <span
-                class="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-xs font-semibold border border-cyan-500/30">IoT</span>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="flex gap-2 pt-4 border-t border-gray-700/50">
-              <button disabled
-                class="flex-1 bg-gray-600/50 text-gray-400 px-4 py-2.5 rounded-lg text-xs font-bold cursor-not-allowed opacity-60">
-                <i class="fas fa-hourglass-half mr-2"></i>Planning Phase
-              </button>
-              <button disabled
-                class="flex-1 bg-gray-700/50 text-gray-400 px-4 py-2.5 rounded-lg text-xs font-bold cursor-not-allowed border border-gray-600 opacity-60">
-                <i class="fab fa-github mr-2"></i>Coming Soon
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 15: C++ Data Structures Library (Placeholder) -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="c++">
-
-          <!-- Coming Soon Badge -->
-          <div class="absolute top-3 right-3 z-10">
-            <span
-              class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
-              <i class="fas fa-code mr-1"></i>Concept
-            </span>
-          </div>
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-indigo-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-project-diagram"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Advanced Data Structures Library
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Custom C++ library implementing advanced data
-              structures with template support and STL-like interface.</p>
-
-            <div class="mb-4">
-              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Planned Features</h4>
-              <ul class="space-y-1 text-sm text-gray-400">
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>AVL Trees, Red-Black Trees, B-Trees</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Hash tables with custom collision handling</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Graph algorithms & advanced heaps</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span
-                class="bg-indigo-500/20 text-indigo-400 px-3 py-1 rounded-full text-xs font-semibold border border-indigo-500/30">C++</span>
-              <span
-                class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs font-semibold border border-purple-500/30">Templates</span>
-              <span
-                class="bg-pink-500/20 text-pink-400 px-3 py-1 rounded-full text-xs font-semibold border border-pink-500/30">Data
-                Structures</span>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="flex gap-2 pt-4 border-t border-gray-700/50">
-              <button disabled
-                class="flex-1 bg-gray-600/50 text-gray-400 px-4 py-2.5 rounded-lg text-xs font-bold cursor-not-allowed opacity-60">
-                <i class="fas fa-pencil-ruler mr-2"></i>Design Phase
-              </button>
-              <button disabled
-                class="flex-1 bg-gray-700/50 text-gray-400 px-4 py-2.5 rounded-lg text-xs font-bold cursor-not-allowed border border-gray-600 opacity-60">
-                <i class="fab fa-github mr-2"></i>Coming Soon
-              </button>
             </div>
           </div>
         </div>
 
       </div>
 
+      <!-- Load More Button -->
+      <div id="load-more-container" class="text-center mt-12 hidden">
+        <button id="load-more-btn"
+          class="px-8 py-3 bg-gray-800 hover:bg-gray-700 text-white font-bold rounded-full border border-gray-600 transition-all duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#14b8a6]">
+          Load More <i class="fas fa-chevron-down ml-2"></i>
+        </button>
+      </div>
 
     </section>
 
@@ -2186,9 +2250,6 @@
           <h2 class="text-5xl md:text-6xl font-extrabold mb-4 animate-gradient">
             Education
           </h2>
-          <p class="text-gray-400 text-lg max-w-2xl mx-auto">
-            Building expertise through academic excellence and hands-on learning
-          </p>
         </div>
 
         <!-- Education Card -->
@@ -2492,10 +2553,6 @@
           <h2 class="text-5xl md:text-6xl font-extrabold animate-gradient">
             Licenses & Certifications
           </h2>
-          <p class="text-gray-400 text-lg max-w-3xl mx-auto">
-            Recognitions that validate my commitment to continuous learning across web development, software
-            engineering, cloud, and emerging technologies.
-          </p>
         </div>
 
         <!-- Certifications Grid -->
