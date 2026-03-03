@@ -34,7 +34,7 @@ app.use(helmet({
 }));
 
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' ? ['https://dhruvthakar.dev'] : true,
+  origin: process.env.NODE_ENV === 'production' ? ['https://ESSENT-researcher.github.io'] : true,
   credentials: true
 }));
 
@@ -221,7 +221,7 @@ app.post("/api/chat", async (req, res) => {
     // If OpenAI is not configured, return a helpful message
     if (!openai) {
       return res.json({ 
-        reply: "Hi! I'm Dhruv's portfolio assistant. The chatbot feature is currently in development mode. Feel free to explore the portfolio or use the contact form to reach out directly!" 
+        reply: "Hi! I'm Yoon JaeU's portfolio assistant. The chatbot feature is currently in development mode. Feel free to explore the portfolio or use the contact form to reach out directly!" 
       });
     }
 
@@ -231,7 +231,7 @@ app.post("/api/chat", async (req, res) => {
         {
           role: "system",
           content:
-            "You are Dhruv Thakar's portfolio assistant. Answer questions about Dhruv's skills, projects, education, and background in a professional but friendly tone. If asked about contact, direct users to the Contact section.",
+            "You are Yoon JaeU's portfolio assistant. Answer questions about Yoon JaeU's skills, projects, education, and background in a professional but friendly tone. If asked about contact, direct users to the Contact section.",
         },
         { role: "user", content: message },
       ],
