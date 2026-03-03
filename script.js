@@ -653,6 +653,9 @@ window.addEventListener('load', () => {
 
     // Project Modals
     initProjectModals();
+
+    // Certifications Load More
+    initCertificationsLoadMore();
   }, 800);
 });
 
@@ -890,4 +893,48 @@ function initProjectModals() {
   });
 
   [closeBtn, closeBtnFooter, backdrop].forEach(el => el?.addEventListener('click', closeModal));
+}
+
+// ================= CERTIFICATIONS LOAD MORE =================
+function initCertificationsLoadMore() {
+  const cards = document.querySelectorAll('.certification-card');
+  const loadMoreBtn = document.getElementById('load-more-certs-btn');
+  const loadMoreContainer = document.getElementById('load-more-certs-container');
+  
+  if (!cards.length || !loadMoreBtn) return;
+
+  const ITEMS_PER_PAGE = 2;
+  let visibleCount = ITEMS_PER_PAGE;
+
+  const updateVisibility = () => {
+    let hiddenCount = 0;
+    cards.forEach((card, index) => {
+      if (index < visibleCount) {
+        card.style.display = 'block';
+        if (card.style.animation === '') {
+           card.style.animation = 'none';
+           card.offsetHeight; /* trigger reflow */
+           card.style.animation = 'fadeInUp 0.5s ease-out forwards';
+        }
+      } else {
+        card.style.display = 'none';
+        hiddenCount++;
+      }
+    });
+
+    loadMoreContainer.classList.toggle('hidden', hiddenCount === 0);
+  };
+
+  updateVisibility();
+
+  loadMoreBtn.addEventListener('click', () => {
+    visibleCount += 2;
+    updateVisibility();
+    
+    // Smooth scroll down to reveal new items
+    window.scrollBy({
+      top: 500,
+      behavior: 'smooth'
+    });
+  });
 }

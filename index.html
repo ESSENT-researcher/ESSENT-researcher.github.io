@@ -1036,6 +1036,11 @@
             <div class="text-xs text-gray-400 uppercase tracking-wide">Projects</div>
           </div>
           <div
+            class="bg-gradient-to-br from-yellow-500/10 to-yellow-600/10 backdrop-blur-sm p-4 rounded-xl border border-yellow-500/20 text-center hover:scale-105 transition-transform duration-300">
+            <div class="text-3xl font-bold text-yellow-400 mb-1">3</div>
+            <div class="text-xs text-gray-400 uppercase tracking-wide">Conference Posters</div>
+          </div>
+          <div
             class="bg-gradient-to-br from-teal-500/10 to-teal-600/10 backdrop-blur-sm p-4 rounded-xl border border-teal-500/20 text-center hover:scale-105 transition-transform duration-300">
             <div class="text-3xl font-bold text-[#14b8a6] mb-1">5</div>
             <div class="text-xs text-gray-400 uppercase tracking-wide">Awards & Honors</div>
@@ -1044,11 +1049,6 @@
             class="bg-gradient-to-br from-purple-500/10 to-purple-600/10 backdrop-blur-sm p-4 rounded-xl border border-purple-500/20 text-center hover:scale-105 transition-transform duration-300">
             <div class="text-3xl font-bold text-purple-400 mb-1">17</div>
             <div class="text-xs text-gray-400 uppercase tracking-wide">Tools</div>
-          </div>
-          <div
-            class="bg-gradient-to-br from-yellow-500/10 to-yellow-600/10 backdrop-blur-sm p-4 rounded-xl border border-yellow-500/20 text-center hover:scale-105 transition-transform duration-300">
-            <div class="text-3xl font-bold text-yellow-400 mb-1">3</div>
-            <div class="text-xs text-gray-400 uppercase tracking-wide">Conference Posters</div>
           </div>
         </div>
       </div>
@@ -1069,6 +1069,12 @@
         </button>
 
         <button
+          class="filter-btn px-4 py-2 rounded-full text-xs md:text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-yellow-400 hover:text-yellow-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-gray-900"
+          data-filter="poster" aria-pressed="false" aria-label="Filter by Conference Posters">
+          <i class="fas fa-scroll text-yellow-400 mr-2" aria-hidden="true"></i> Conference Posters
+        </button>
+
+        <button
           class="filter-btn px-4 py-2 rounded-full text-xs md:text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#22d3ee] hover:text-[#22d3ee] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900"
           data-filter="award" aria-pressed="false" aria-label="Filter by Awards & Honors">
           <i class="fas fa-trophy text-[#22d3ee] mr-2" aria-hidden="true"></i> Awards & Honors
@@ -1078,12 +1084,6 @@
           class="filter-btn px-4 py-2 rounded-full text-xs md:text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-teal-400 hover:text-teal-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-gray-900"
           data-filter="tool" aria-pressed="false" aria-label="Filter by Tools">
           <i class="fas fa-tools text-teal-400 mr-2" aria-hidden="true"></i> Tools
-        </button>
-
-        <button
-          class="filter-btn px-4 py-2 rounded-full text-xs md:text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-yellow-400 hover:text-yellow-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-gray-900"
-          data-filter="poster" aria-pressed="false" aria-label="Filter by Conference Posters">
-          <i class="fas fa-scroll text-yellow-400 mr-2" aria-hidden="true"></i> Conference Posters
         </button>
       </div>
 
@@ -1103,6 +1103,13 @@
         <div
           class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
           data-category="project">
+
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-[#22d3ee]/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Project
+            </span>
+          </div>
 
           <!-- Project Icon/Thumbnail -->
           <div
@@ -1147,6 +1154,13 @@
           class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
           data-category="project">
 
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-[#22d3ee]/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Project
+            </span>
+          </div>
+
           <!-- Project Icon/Thumbnail -->
           <div
             class="relative h-40 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center overflow-hidden">
@@ -1189,6 +1203,13 @@
         <div
           class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
           data-category="project">
+
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-[#22d3ee]/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Project
+            </span>
+          </div>
 
           <!-- Project Icon/Thumbnail -->
           <div
@@ -1233,6 +1254,13 @@
           class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
           data-category="project">
 
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-[#22d3ee]/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Project
+            </span>
+          </div>
+
           <!-- Project Icon/Thumbnail -->
           <div
             class="relative h-40 bg-gradient-to-br from-[#14b8a6]/20 to-[#06b6d4]/20 flex items-center justify-center overflow-hidden">
@@ -1275,6 +1303,13 @@
         <div
           class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
           data-category="project">
+
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-[#22d3ee]/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Project
+            </span>
+          </div>
 
           <!-- Project Icon/Thumbnail -->
           <div
@@ -1319,6 +1354,13 @@
           class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
           data-category="project">
 
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-[#22d3ee]/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Project
+            </span>
+          </div>
+
           <!-- Project Icon/Thumbnail -->
           <div
             class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
@@ -1357,750 +1399,6 @@
           </div>
         </div>
 
-        <!-- Project 8c: Semester High Honor (Sep 2021) -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="award">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-emerald-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-medal"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Semester High Honor (2021-2)
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Awarded to students with high achievements throughout the semester.</p>
-
-            <div class="mb-4">
-              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
-              <ul class="space-y-1 text-sm text-gray-400">
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Top 5% of students</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Academic Excellence</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Sep 2021</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 8b: Semester High Honor (Mar 2023) -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="award">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-emerald-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-medal"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Semester High Honor (2023-1)
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Awarded to students with high achievements throughout the semester.</p>
-
-            <div class="mb-4">
-              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
-              <ul class="space-y-1 text-sm text-gray-400">
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Top 5% of students</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Academic Excellence</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Mar 2023</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 8: File Compression Tool -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="award">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-emerald-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-medal"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Semester High Honor (2025-2)
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Awarded to students with high achievements throughout the semester.</p>
-
-            <div class="mb-4">
-              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
-              <ul class="space-y-1 text-sm text-gray-400">
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Top 5% of students</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Academic Excellence</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Sep 2025</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 7: Airline Reservation System -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="award">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-yellow-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-trophy"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Capstone Design Competition
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Reliability evaluation and lifetime modeling of foldable displays. (Prof. Eun-chae Jeon)</p>
-
-            <div class="mb-4">
-              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
-              <ul class="space-y-1 text-sm text-gray-400">
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>2nd Place Winner</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Team Leader & Presenter</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Dec 2025</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 9: Computer Science Quiz -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="award">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-indigo-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-university"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Academic Exchange Scholarship
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Awarded to selected students for active participation in the academic exchange program.</p>
-
-            <div class="mb-4">
-              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
-              <ul class="space-y-1 text-sm text-gray-400">
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Yonsei University</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Exchange Program</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Mar 2022</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Experimental Tool 1: Potentiostat / Galvanostat -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="tool">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-bolt"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Potentiostat / Galvanostat
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Electrochemical measurement system for analyzing reaction mechanisms and kinetics.</p>
-
-            <div class="mb-4">
-              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
-              <ul class="space-y-1 text-sm text-gray-400">
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Cyclic Voltammetry (CV)</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Electrochemical Impedance Spectroscopy (EIS)</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Experimental Tool 2: SEM-EDS -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="tool">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-microscope"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              SEM-EDS
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Scanning Electron Microscopy with Energy Dispersive Spectroscopy for surface and elemental analysis.</p>
-
-            <div class="mb-4">
-              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
-              <ul class="space-y-1 text-sm text-gray-400">
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Surface morphology imaging</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Elemental composition analysis</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Experimental Tool 3: XRD -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="tool">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-layer-group"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              XRD
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">X-ray Diffraction for determining crystal structures and phase identification of materials.</p>
-
-            <div class="mb-4">
-              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
-              <ul class="space-y-1 text-sm text-gray-400">
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Crystal structure analysis</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Phase identification</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Experimental Tool 4: Electric Furnace -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="tool">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-fire"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Electric Furnace
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">High-temperature furnace for heat treatment, sintering, and annealing of materials.</p>
-
-            <div class="mb-4">
-              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
-              <ul class="space-y-1 text-sm text-gray-400">
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Heat treatment</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Sintering & Annealing</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Experimental Tool 5: AFM -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="tool">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-wave-square"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              AFM
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Atomic Force Microscopy for high-resolution surface topography imaging at the nanoscale.</p>
-
-            <div class="mb-4">
-              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
-              <ul class="space-y-1 text-sm text-gray-400">
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Nanoscale imaging</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Surface roughness analysis</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Experimental Tool 6: UV-Vis -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="tool">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-eye"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              UV-Vis
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Ultraviolet-Visible Spectroscopy for analyzing optical properties and band gap energy.</p>
-
-            <div class="mb-4">
-              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
-              <ul class="space-y-1 text-sm text-gray-400">
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Absorbance measurement</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Band gap calculation</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Experimental Tool 7: AAS -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="tool">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-atom"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              AAS
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Atomic Absorption Spectroscopy for quantitative determination of chemical elements.</p>
-
-            <div class="mb-4">
-              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
-              <ul class="space-y-1 text-sm text-gray-400">
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Metal concentration analysis</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Experimental Tool 8: Four-point probe -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="tool">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-microchip"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Four-point probe
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Measuring electrical resistivity and sheet resistance of material thin films.</p>
-
-            <div class="mb-4">
-              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
-              <ul class="space-y-1 text-sm text-gray-400">
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
-                  <span>Sheet resistance measurement</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Office Automation 1: Microsoft Word -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="tool">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-blue-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-file-word"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Microsoft Word
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Documentation, report writing, and thesis preparation.</p>
-          </div>
-        </div>
-
-        <!-- Office Automation 2: Microsoft PowerPoint -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="tool">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-indigo-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-file-powerpoint"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Microsoft PowerPoint
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Creating professional presentations and visual aids for research findings.</p>
-          </div>
-        </div>
-
-        <!-- Office Automation 3: Microsoft Excel -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="tool">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-blue-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-file-excel"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Microsoft Excel
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Data organization, statistical analysis, and visualization.</p>
-          </div>
-        </div>
-
-        <!-- Office Automation 4: Origin Pro -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="tool">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-indigo-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-chart-line"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Origin Pro
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Advanced data analysis and scientific graphing software.</p>
-          </div>
-        </div>
-
-        <!-- Development Tool 1: Visual Studio Code -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="tool">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-purple-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-code"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Visual Studio Code
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Source code editor for Python, C++, and web development.</p>
-          </div>
-        </div>
-
-        <!-- Development Tool 2: Visual Studio -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="tool">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-purple-500/20 to-indigo-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-purple-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-laptop-code"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Visual Studio
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Integrated Development Environment (IDE) for comprehensive software development.</p>
-          </div>
-        </div>
-
-        <!-- Development Tool 3: Antigravity -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="tool">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-purple-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-rocket"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Antigravity
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Python module for exploring gravity simulation concepts.</p>
-          </div>
-        </div>
-
-        <!-- Development Tool 4: MATLAB -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="tool">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-purple-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-calculator"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              MATLAB
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Numerical computing environment for data analysis and algorithm development.</p>
-          </div>
-        </div>
-
-        <!-- 3D Modeling 1: Autodesk AutoCAD -->
-        <div
-          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
-          data-category="tool">
-
-          <!-- Project Icon/Thumbnail -->
-          <div
-            class="relative h-40 bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center overflow-hidden">
-            <div
-              class="text-6xl text-orange-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <i class="fas fa-drafting-compass"></i>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
-          </div>
-
-          <!-- Card Content -->
-          <div class="p-6">
-            <h3
-              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
-              Autodesk AutoCAD
-            </h3>
-            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Computer-aided design software for 2D and 3D modeling and drafting.</p>
-          </div>
-        </div>
-
         <!-- Conference Poster 1 -->
         <div
           class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
@@ -2110,6 +1408,13 @@
           <div class="absolute top-3 left-3 z-10">
             <span class="bg-red-500/90 text-white px-2 py-1 rounded text-xs font-bold shadow-lg flex items-center gap-1 backdrop-blur-sm">
               <i class="fas fa-file-pdf"></i> PDF
+            </span>
+          </div>
+
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-yellow-400/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Poster
             </span>
           </div>
 
@@ -2159,6 +1464,13 @@
             </span>
           </div>
 
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-yellow-400/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Poster
+            </span>
+          </div>
+
           <!-- Project Icon/Thumbnail -->
           <div
             class="relative h-40 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center overflow-hidden">
@@ -2205,6 +1517,13 @@
             </span>
           </div>
 
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-yellow-400/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Poster
+            </span>
+          </div>
+
           <!-- Project Icon/Thumbnail -->
           <div
             class="relative h-40 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center overflow-hidden">
@@ -2236,6 +1555,904 @@
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+
+        <!-- Project 8c: Semester High Honor (Sep 2021) -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="award">
+
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-[#14b8a6]/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Honor
+            </span>
+          </div>
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-emerald-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-medal"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Semester High Honor (2021-2)
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Awarded to students with high achievements throughout the semester.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Top 5% of students</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Academic Excellence</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Sep 2021</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 8b: Semester High Honor (Mar 2023) -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="award">
+
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-[#14b8a6]/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Honor
+            </span>
+          </div>
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-emerald-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-medal"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Semester High Honor (2023-1)
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Awarded to students with high achievements throughout the semester.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Top 5% of students</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Academic Excellence</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Mar 2023</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 8: File Compression Tool -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="award">
+
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-[#14b8a6]/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Honor
+            </span>
+          </div>
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-emerald-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-medal"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Semester High Honor (2025-2)
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Awarded to students with high achievements throughout the semester.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Top 5% of students</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Academic Excellence</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Sep 2025</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 7: Airline Reservation System -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="award">
+
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-[#14b8a6]/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Honor
+            </span>
+          </div>
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-yellow-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Capstone Design Competition
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Reliability evaluation and lifetime modeling of foldable displays. (Prof. Eun-chae Jeon)</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>2nd Place Winner</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Team Leader & Presenter</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Dec 2025</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 9: Computer Science Quiz -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="award">
+
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-[#14b8a6]/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Award
+            </span>
+          </div>
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-indigo-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-university"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Academic Exchange Scholarship
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Awarded to selected students for active participation in the academic exchange program.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Yonsei University</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Exchange Program</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Mar 2022</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experimental Tool 1: Potentiostat / Galvanostat -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-purple-400/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Tool
+            </span>
+          </div>
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Potentiostat / Galvanostat
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Electrochemical measurement system for analyzing reaction mechanisms and kinetics.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Cyclic Voltammetry (CV)</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Electrochemical Impedance Spectroscopy (EIS)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experimental Tool 2: SEM-EDS -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-purple-400/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Tool
+            </span>
+          </div>
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-microscope"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              SEM-EDS
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Scanning Electron Microscopy with Energy Dispersive Spectroscopy for surface and elemental analysis.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Surface morphology imaging</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Elemental composition analysis</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experimental Tool 3: XRD -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-purple-400/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Tool
+            </span>
+          </div>
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-layer-group"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              XRD
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">X-ray Diffraction for determining crystal structures and phase identification of materials.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Crystal structure analysis</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Phase identification</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experimental Tool 4: Electric Furnace -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-purple-400/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Tool
+            </span>
+          </div>
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-fire"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Electric Furnace
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">High-temperature furnace for heat treatment, sintering, and annealing of materials.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Heat treatment</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Sintering & Annealing</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experimental Tool 5: AFM -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-purple-400/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Tool
+            </span>
+          </div>
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-wave-square"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              AFM
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Atomic Force Microscopy for high-resolution surface topography imaging at the nanoscale.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Nanoscale imaging</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Surface roughness analysis</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experimental Tool 6: UV-Vis -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-purple-400/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Tool
+            </span>
+          </div>
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-eye"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              UV-Vis
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Ultraviolet-Visible Spectroscopy for analyzing optical properties and band gap energy.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Absorbance measurement</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Band gap calculation</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experimental Tool 7: AAS -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-purple-400/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Tool
+            </span>
+          </div>
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-atom"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              AAS
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Atomic Absorption Spectroscopy for quantitative determination of chemical elements.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Metal concentration analysis</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experimental Tool 8: Four-point probe -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-purple-400/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Tool
+            </span>
+          </div>
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-microchip"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Four-point probe
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Measuring electrical resistivity and sheet resistance of material thin films.</p>
+
+            <div class="mb-4">
+              <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+              <ul class="space-y-1 text-sm text-gray-400">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                  <span>Sheet resistance measurement</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Office Automation 1: Microsoft Word -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-purple-400/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Tool
+            </span>
+          </div>
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-blue-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-file-word"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Microsoft Word
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Documentation, report writing, and thesis preparation.</p>
+          </div>
+        </div>
+
+        <!-- Office Automation 2: Microsoft PowerPoint -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-purple-400/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Tool
+            </span>
+          </div>
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-indigo-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-file-powerpoint"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Microsoft PowerPoint
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Creating professional presentations and visual aids for research findings.</p>
+          </div>
+        </div>
+
+        <!-- Office Automation 3: Microsoft Excel -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-purple-400/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Tool
+            </span>
+          </div>
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-blue-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-file-excel"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Microsoft Excel
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Data organization, statistical analysis, and visualization.</p>
+          </div>
+        </div>
+
+        <!-- Office Automation 4: Origin Pro -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-purple-400/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Tool
+            </span>
+          </div>
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-indigo-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Origin Pro
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Advanced data analysis and scientific graphing software.</p>
+          </div>
+        </div>
+
+        <!-- Development Tool 1: Visual Studio Code -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-purple-400/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Tool
+            </span>
+          </div>
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-purple-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Visual Studio Code
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Source code editor for Python, C++, and web development.</p>
+          </div>
+        </div>
+
+        <!-- Development Tool 2: Visual Studio -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-purple-400/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Tool
+            </span>
+          </div>
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-purple-500/20 to-indigo-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-purple-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Visual Studio
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Integrated Development Environment (IDE) for comprehensive software development.</p>
+          </div>
+        </div>
+
+        <!-- Development Tool 3: Antigravity -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-purple-400/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Tool
+            </span>
+          </div>
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-purple-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Antigravity
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Python module for exploring gravity simulation concepts.</p>
+          </div>
+        </div>
+
+        <!-- Development Tool 4: MATLAB -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-purple-400/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Tool
+            </span>
+          </div>
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-purple-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              MATLAB
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Numerical computing environment for data analysis and algorithm development.</p>
+          </div>
+        </div>
+
+        <!-- 3D Modeling 1: Autodesk AutoCAD -->
+        <div
+          class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+          data-category="tool">
+
+          <!-- Category Badge -->
+          <div class="absolute top-3 right-3 z-10">
+            <span class="bg-purple-400/90 text-[#0f172a] px-2 py-1 rounded text-[10px] font-bold shadow-lg backdrop-blur-sm uppercase tracking-wide">
+              Tool
+            </span>
+          </div>
+
+          <!-- Project Icon/Thumbnail -->
+          <div
+            class="relative h-40 bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center overflow-hidden">
+            <div
+              class="text-6xl text-orange-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+              <i class="fas fa-drafting-compass"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6">
+            <h3
+              class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+              Autodesk AutoCAD
+            </h3>
+            <p class="text-gray-300 mb-4 text-sm leading-relaxed">Computer-aided design software for 2D and 3D modeling and drafting.</p>
           </div>
         </div>
 
@@ -2577,707 +2794,118 @@
         </div>
 
         <!-- Certifications Grid -->
-        <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+        <div class="grid gap-8 grid-cols-1 max-w-4xl mx-auto">
 
-          <!-- freeCodeCamp Data Visualization -->
+          <!-- OPIC IH -->
           <article
-            class="group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-[#14b8a6]/20 hover:border-[#14b8a6]/60 hover:shadow-[0_0_35px_rgba(20,184,166,0.35)] transition-all duration-500 hover:-translate-y-2">
-            <div class="flex items-start gap-4">
-              <div
-                class="w-16 h-16 bg-[#14b8a6]/10 border border-[#14b8a6]/40 rounded-2xl flex items-center justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/FreeCodeCamp_logo.svg"
-                  alt="freeCodeCamp logo" class="w-10 h-10 object-contain" loading="lazy" />
-              </div>
-              <div>
-                <h3 class="text-xl font-bold text-white group-hover:text-[#14b8a6] transition-colors">Data Visualization
-                </h3>
-                <p class="text-sm text-gray-400 font-semibold">freeCodeCamp • Issued Oct 2025</p>
-              </div>
-            </div>
-            <p class="mt-4 text-sm text-gray-300 leading-relaxed">
-              Built interactive dashboards and data storytelling experiences using JavaScript libraries and real-world
-              datasets.
-            </p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">D3.js</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Data
-                Storytelling</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">APIs</span>
-            </div>
-            <div class="mt-6 pt-6 border-t border-gray-700 flex items-center justify-between gap-4">
-              <span class="text-xs text-gray-500 font-mono truncate">Credential ID: dhruvht612-dv</span>
-              <a href="https://www.freecodecamp.org/certification/dhruvht612/data-visualization" target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-sm font-semibold text-[#14b8a6] hover:text-[#22d3ee] transition-colors">
-                Show credential
-                <i class="fas fa-external-link-alt text-xs"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- freeCodeCamp Front End Development Libraries -->
-          <article
-            class="group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-[#22d3ee]/20 hover:border-[#22d3ee]/60 hover:shadow-[0_0_35px_rgba(34,211,238,0.35)] transition-all duration-500 hover:-translate-y-2">
-            <div class="flex items-start gap-4">
-              <div
-                class="w-16 h-16 bg-[#22d3ee]/10 border border-[#22d3ee]/40 rounded-2xl flex items-center justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/FreeCodeCamp_logo.svg"
-                  alt="freeCodeCamp logo" class="w-10 h-10 object-contain" loading="lazy" />
-              </div>
-              <div>
-                <h3 class="text-xl font-bold text-white group-hover:text-[#22d3ee] transition-colors">Front End
-                  Development Libraries</h3>
-                <p class="text-sm text-gray-400 font-semibold">freeCodeCamp • Issued Oct 2025</p>
-              </div>
-            </div>
-            <p class="mt-4 text-sm text-gray-300 leading-relaxed">
-              Delivered responsive interfaces with React, Redux, Bootstrap, and jQuery while practicing component-driven
-              development.
-            </p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">React</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Redux</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">UI
-                Engineering</span>
-            </div>
-            <div class="mt-6 pt-6 border-t border-gray-700 flex items-center justify-between gap-4">
-              <span class="text-xs text-gray-500 font-mono truncate">Credential ID: dhruvht612-fedl</span>
-              <a href="https://www.freecodecamp.org/certification/dhruvht612/front-end-development-libraries"
-                target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-sm font-semibold text-[#22d3ee] hover:text-[#14b8a6] transition-colors">
-                Show credential
-                <i class="fas fa-external-link-alt text-xs"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- freeCodeCamp Legacy Front End -->
-          <article
-            class="group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-emerald-500/20 hover:border-emerald-500/60 hover:shadow-[0_0_35px_rgba(16,185,129,0.35)] transition-all duration-500 hover:-translate-y-2">
-            <div class="flex items-start gap-4">
-              <div
-                class="w-16 h-16 bg-emerald-500/10 border border-emerald-500/40 rounded-2xl flex items-center justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/FreeCodeCamp_logo.svg"
-                  alt="freeCodeCamp logo" class="w-10 h-10 object-contain" loading="lazy" />
-              </div>
-              <div>
-                <h3 class="text-xl font-bold text-white group-hover:text-emerald-300 transition-colors">Legacy Front End
-                </h3>
-                <p class="text-sm text-gray-400 font-semibold">freeCodeCamp • Issued Oct 2025</p>
-              </div>
-            </div>
-            <p class="mt-4 text-sm text-gray-300 leading-relaxed">
-              Mastered fundamentals of HTML, CSS, and JavaScript through classic projects emphasizing accessibility and
-              responsive layouts.
-            </p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Responsive
-                Design</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Accessibility</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Legacy
-                JS</span>
-            </div>
-            <div class="mt-6 pt-6 border-t border-gray-700 flex items-center justify-between gap-4">
-              <span class="text-xs text-gray-500 font-mono truncate">Credential ID: dhruvht612-lfe</span>
-              <a href="https://www.freecodecamp.org/certification/dhruvht612/legacy-front-end" target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-300 hover:text-[#22d3ee] transition-colors">
-                Show credential
-                <i class="fas fa-external-link-alt text-xs"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- freeCodeCamp Legacy JavaScript Algorithms and Data Structures -->
-          <article
-            class="group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-purple-500/20 hover:border-purple-400/60 hover:shadow-[0_0_35px_rgba(168,85,247,0.35)] transition-all duration-500 hover:-translate-y-2">
-            <div class="flex items-start gap-4">
-              <div
-                class="w-16 h-16 bg-purple-500/10 border border-purple-500/40 rounded-2xl flex items-center justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/FreeCodeCamp_logo.svg"
-                  alt="freeCodeCamp logo" class="w-10 h-10 object-contain" loading="lazy" />
-              </div>
-              <div>
-                <h3 class="text-xl font-bold text-white group-hover:text-purple-300 transition-colors">Legacy JavaScript
-                  Algorithms & Data Structures</h3>
-                <p class="text-sm text-gray-400 font-semibold">freeCodeCamp • Issued Oct 2025</p>
-              </div>
-            </div>
-            <p class="mt-4 text-sm text-gray-300 leading-relaxed">
-              Strengthened problem-solving through algorithmic challenges covering recursion, functional programming,
-              and OOP patterns.
-            </p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Algorithms</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Data
-                Structures</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">ES6</span>
-            </div>
-            <div class="mt-6 pt-6 border-t border-gray-700 flex items-center justify-between gap-4">
-              <span class="text-xs text-gray-500 font-mono truncate">Credential ID: dhruvht612-ljaads</span>
-              <a href="https://www.freecodecamp.org/certification/dhruvht612/legacy-javascript-algorithms-and-data-structures"
-                target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-sm font-semibold text-purple-300 hover:text-[#22d3ee] transition-colors">
-                Show credential
-                <i class="fas fa-external-link-alt text-xs"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- freeCodeCamp Responsive Web Design -->
-          <article
-            class="group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-pink-500/20 hover:border-pink-400/60 hover:shadow-[0_0_35px_rgba(236,72,153,0.35)] transition-all duration-500 hover:-translate-y-2">
-            <div class="flex items-start gap-4">
-              <div
-                class="w-16 h-16 bg-pink-500/10 border border-pink-500/40 rounded-2xl flex items-center justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/FreeCodeCamp_logo.svg"
-                  alt="freeCodeCamp logo" class="w-10 h-10 object-contain" loading="lazy" />
-              </div>
-              <div>
-                <h3 class="text-xl font-bold text-white group-hover:text-pink-300 transition-colors">Responsive Web
-                  Design</h3>
-                <p class="text-sm text-gray-400 font-semibold">freeCodeCamp • Issued Oct 2025</p>
-              </div>
-            </div>
-            <p class="mt-4 text-sm text-gray-300 leading-relaxed">
-              Crafted mobile-first layouts using modern CSS features including flexbox, grid, and accessible semantic
-              markup.
-            </p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">HTML5</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">CSS
-                Grid</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Flexbox</span>
-            </div>
-            <div class="mt-6 pt-6 border-t border-gray-700 flex items-center justify-between gap-4">
-              <span class="text-xs text-gray-500 font-mono truncate">Credential ID: dhruvht612-rwd</span>
-              <a href="https://www.freecodecamp.org/certification/dhruvht612/responsive-web-design" target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-sm font-semibold text-pink-300 hover:text-[#22d3ee] transition-colors">
-                Show credential
-                <i class="fas fa-external-link-alt text-xs"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- freeCodeCamp Scientific Computing with Python -->
-          <article
-            class="group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-blue-500/20 hover:border-blue-400/60 hover:shadow-[0_0_35px_rgba(59,130,246,0.35)] transition-all duration-500 hover:-translate-y-2">
-            <div class="flex items-start gap-4">
-              <div
-                class="w-16 h-16 bg-blue-500/10 border border-blue-500/40 rounded-2xl flex items-center justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/FreeCodeCamp_logo.svg"
-                  alt="freeCodeCamp logo" class="w-10 h-10 object-contain" loading="lazy" />
-              </div>
-              <div>
-                <h3 class="text-xl font-bold text-white group-hover:text-blue-300 transition-colors">Scientific
-                  Computing with Python</h3>
-                <p class="text-sm text-gray-400 font-semibold">freeCodeCamp • Issued Oct 2025</p>
-              </div>
-            </div>
-            <p class="mt-4 text-sm text-gray-300 leading-relaxed">
-              Applied Python to automate workflows, manipulate complex data structures, and build command-line
-              utilities.
-            </p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Python</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Automation</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Scientific
-                Computing</span>
-            </div>
-            <div class="mt-6 pt-6 border-t border-gray-700 flex items-center justify-between gap-4">
-              <span class="text-xs text-gray-500 font-mono truncate">Credential ID: dhruvht612-scwp</span>
-              <a href="https://www.freecodecamp.org/certification/dhruvht612/scientific-computing-with-python-v7"
-                target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-sm font-semibold text-blue-300 hover:text-[#22d3ee] transition-colors">
-                Show credential
-                <i class="fas fa-external-link-alt text-xs"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Deloitte Technology Job Simulation -->
-          <article
-            class="group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-lime-500/20 hover:border-lime-400/60 hover:shadow-[0_0_35px_rgba(132,204,22,0.35)] transition-all duration-500 hover:-translate-y-2">
-            <div class="flex items-start gap-4">
-              <div
-                class="w-16 h-16 bg-lime-500/10 border border-lime-500/40 rounded-2xl flex items-center justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Deloitte.svg" alt="Deloitte logo"
-                  class="w-12 h-12 object-contain" loading="lazy" />
-              </div>
-              <div>
-                <h3 class="text-xl font-bold text-white group-hover:text-lime-300 transition-colors">Technology Job
-                  Simulation</h3>
-                <p class="text-sm text-gray-400 font-semibold">Deloitte • Issued Sep 2025</p>
-              </div>
-            </div>
-            <p class="mt-4 text-sm text-gray-300 leading-relaxed">
-              Completed Deloitte Australia's Forage program, practicing stakeholder communication and solution design
-              for enterprise clients.
-            </p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Client
-                Advisory</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Tech
-                Strategy</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Forage</span>
-            </div>
-            <div class="mt-6 pt-6 border-t border-gray-700 flex items-center justify-between gap-4">
-              <span class="text-xs text-gray-500 font-mono truncate">Credential ID: iQg3uLs7Nsgss944s</span>
-              <a href="https://www.theforage.com/badges/iQg3uLs7Nsgss944s" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-sm font-semibold text-lime-300 hover:text-[#22d3ee] transition-colors">
-                Show credential
-                <i class="fas fa-external-link-alt text-xs"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- AWS Solutions Architecture Job Simulation -->
-          <article
-            class="group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-orange-400/20 hover:border-orange-300/60 hover:shadow-[0_0_35px_rgba(251,146,60,0.35)] transition-all duration-500 hover:-translate-y-2">
-            <div class="flex items-start gap-4">
-              <div
-                class="w-16 h-16 bg-orange-500/10 border border-orange-400/40 rounded-2xl flex items-center justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
-                  alt="Amazon Web Services logo" class="w-12 h-12 object-contain" loading="lazy" />
-              </div>
-              <div>
-                <h3 class="text-xl font-bold text-white group-hover:text-orange-300 transition-colors">Solutions
-                  Architecture Job Simulation</h3>
-                <p class="text-sm text-gray-400 font-semibold">Amazon Web Services (AWS) • Issued Aug 2025</p>
-              </div>
-            </div>
-            <p class="mt-4 text-sm text-gray-300 leading-relaxed">
-              Explored cloud solution design, cost optimization, and architectural best practices through an AWS virtual
-              experience.
-            </p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Cloud
-                Architecture</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">AWS</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Cost
-                Optimization</span>
-            </div>
-            <div class="mt-6 pt-6 border-t border-gray-700 flex items-center justify-between gap-4">
-              <span class="text-xs text-gray-500 font-mono truncate">Credential ID: ujyWQfz2ufziqY3kD</span>
-              <a href="https://www.theforage.com/badges/ujyWQfz2ufziqY3kD" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-sm font-semibold text-orange-300 hover:text-[#22d3ee] transition-colors">
-                Show credential
-                <i class="fas fa-external-link-alt text-xs"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Accenture Nordics Software Engineering Job Simulation -->
-          <article
-            class="group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-fuchsia-500/20 hover:border-fuchsia-400/60 hover:shadow-[0_0_35px_rgba(217,70,239,0.35)] transition-all duration-500 hover:-translate-y-2">
-            <div class="flex items-start gap-4">
-              <div
-                class="w-16 h-16 bg-fuchsia-500/10 border border-fuchsia-500/40 rounded-2xl flex items-center justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Accenture.svg" alt="Accenture logo"
-                  class="w-12 h-12 object-contain" loading="lazy" />
-              </div>
-              <div>
-                <h3 class="text-xl font-bold text-white group-hover:text-fuchsia-300 transition-colors">Software
-                  Engineering Job Simulation</h3>
-                <p class="text-sm text-gray-400 font-semibold">Accenture Nordics • Issued Aug 2025</p>
-              </div>
-            </div>
-            <p class="mt-4 text-sm text-gray-300 leading-relaxed">
-              Simulated consulting engagements covering architecture decisions, sprint rituals, and secure coding
-              practices.
-            </p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Software
-                Architecture</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Agile
-                &amp; Scrum</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Application
-                Security</span>
-            </div>
-            <div class="mt-6 pt-6 border-t border-gray-700 flex items-center justify-between gap-4">
-              <span class="text-xs text-gray-500 font-mono truncate">Credential ID: FxWLNHwDGysqafAAx</span>
-              <a href="https://www.theforage.com/badges/FxWLNHwDGysqafAAx" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-sm font-semibold text-fuchsia-300 hover:text-[#22d3ee] transition-colors">
-                Show credential
-                <i class="fas fa-external-link-alt text-xs"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Datacom Introduction to Cloud Job Simulation -->
-          <article
-            class="group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-cyan-500/20 hover:border-cyan-400/60 hover:shadow-[0_0_35px_rgba(6,182,212,0.35)] transition-all duration-500 hover:-translate-y-2">
-            <div class="flex items-start gap-4">
-              <div
-                class="w-16 h-16 bg-cyan-500/10 border border-cyan-500/40 rounded-2xl flex items-center justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/en/2/21/Datacom_logo.png" alt="Datacom logo"
-                  class="w-12 h-12 object-contain" loading="lazy" />
-              </div>
-              <div>
-                <h3 class="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">Introduction to
-                  Cloud Job Simulation</h3>
-                <p class="text-sm text-gray-400 font-semibold">Datacom • Issued Aug 2025</p>
-              </div>
-            </div>
-            <p class="mt-4 text-sm text-gray-300 leading-relaxed">
-              Explored foundational cloud concepts while producing written recommendations and Git-based submissions.
-            </p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Git</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Cloud
-                Fundamentals</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Written
-                Communication</span>
-            </div>
-            <div class="mt-6 pt-6 border-t border-gray-700 flex items-center justify-between gap-4">
-              <span class="text-xs text-gray-500 font-mono truncate">Credential ID: rkKd6nmRkq4ESBLrp</span>
-              <a href="https://www.theforage.com/badges/rkKd6nmRkq4ESBLrp" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-sm font-semibold text-cyan-300 hover:text-[#22d3ee] transition-colors">
-                Show credential
-                <i class="fas fa-external-link-alt text-xs"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Datacom Software Development Job Simulation -->
-          <article
-            class="group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-sky-500/20 hover:border-sky-400/60 hover:shadow-[0_0_35px_rgba(14,165,233,0.35)] transition-all duration-500 hover:-translate-y-2">
-            <div class="flex items-start gap-4">
-              <div
-                class="w-16 h-16 bg-sky-500/10 border border-sky-500/40 rounded-2xl flex items-center justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/en/2/21/Datacom_logo.png" alt="Datacom logo"
-                  class="w-12 h-12 object-contain" loading="lazy" />
-              </div>
-              <div>
-                <h3 class="text-xl font-bold text-white group-hover:text-sky-300 transition-colors">Software Development
-                  Job Simulation</h3>
-                <p class="text-sm text-gray-400 font-semibold">Datacom • Issued Aug 2025</p>
-              </div>
-            </div>
-            <p class="mt-4 text-sm text-gray-300 leading-relaxed">
-              Practiced debugging, root-cause analysis, and code review workflows to deliver reliable software updates.
-            </p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Critical
-                Thinking</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Chrome
-                DevTools</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Root
-                Cause Analysis</span>
-            </div>
-            <div class="mt-6 pt-6 border-t border-gray-700 flex items-center justify-between gap-4">
-              <span class="text-xs text-gray-500 font-mono truncate">Credential ID: R8ELSo5QsGpbtbXAR</span>
-              <a href="https://www.theforage.com/badges/R8ELSo5QsGpbtbXAR" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-sm font-semibold text-sky-300 hover:text-[#22d3ee] transition-colors">
-                Show credential
-                <i class="fas fa-external-link-alt text-xs"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Electronic Arts Software Engineering Job Simulation -->
-          <article
-            class="group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-red-500/20 hover:border-red-400/60 hover:shadow-[0_0_35px_rgba(239,68,68,0.35)] transition-all duration-500 hover:-translate-y-2">
-            <div class="flex items-start gap-4">
-              <div
-                class="w-16 h-16 bg-red-500/10 border border-red-500/40 rounded-2xl flex items-center justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Electronic-Arts-Logo.svg"
-                  alt="Electronic Arts logo" class="w-12 h-12 object-contain" loading="lazy" />
-              </div>
-              <div>
-                <h3 class="text-xl font-bold text-white group-hover:text-red-300 transition-colors">Software Engineering
-                  Job Simulation</h3>
-                <p class="text-sm text-gray-400 font-semibold">Electronic Arts (EA) • Issued Aug 2025</p>
-              </div>
-            </div>
-            <p class="mt-4 text-sm text-gray-300 leading-relaxed">
-              Delivered feature prototypes and analyzed telemetry data to enhance game player experiences as part of
-              EA's virtual internship.
-            </p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Prototyping</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Telemetry</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Product
-                Thinking</span>
-            </div>
-            <div class="mt-6 pt-6 border-t border-gray-700 flex items-center justify-between gap-4">
-              <span class="text-xs text-gray-500 font-mono truncate">Credential ID: pTXj8ipvWvQgAmsc9</span>
-              <a href="https://www.theforage.com/badges/pTXj8ipvWvQgAmsc9" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-sm font-semibold text-red-300 hover:text-[#22d3ee] transition-colors">
-                Show credential
-                <i class="fas fa-external-link-alt text-xs"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Skyscanner Front-End Software Engineering Job Simulation -->
-          <article
-            class="group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-teal-500/20 hover:border-teal-400/60 hover:shadow-[0_0_35px_rgba(20,184,166,0.35)] transition-all duration-500 hover:-translate-y-2">
-            <div class="flex items-start gap-4">
-              <div
-                class="w-16 h-16 bg-teal-500/10 border border-teal-500/40 rounded-2xl flex items-center justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/en/8/8d/Skyscanner_logo.png" alt="Skyscanner logo"
-                  class="w-12 h-12 object-contain" loading="lazy" />
-              </div>
-              <div>
-                <h3 class="text-xl font-bold text-white group-hover:text-teal-300 transition-colors">Front-End Software
-                  Engineering Job Simulation</h3>
-                <p class="text-sm text-gray-400 font-semibold">Skyscanner • Issued Aug 2025</p>
-              </div>
-            </div>
-            <p class="mt-4 text-sm text-gray-300 leading-relaxed">
-              Built accessible UI prototypes and proposed performance enhancements for flight search experiences.
-            </p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Accessibility</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Performance</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Frontend</span>
-            </div>
-            <div class="mt-6 pt-6 border-t border-gray-700 flex items-center justify-between gap-4">
-              <span class="text-xs text-gray-500 font-mono truncate">Credential ID: 9pc7uAWmmd7vRL2qq</span>
-              <a href="https://www.theforage.com/badges/9pc7uAWmmd7vRL2qq" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-sm font-semibold text-teal-300 hover:text-[#22d3ee] transition-colors">
-                Show credential
-                <i class="fas fa-external-link-alt text-xs"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Walmart USA Advanced Software Engineering Job Simulation -->
-          <article
-            class="group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-yellow-500/20 hover:border-yellow-400/60 hover:shadow-[0_0_35px_rgba(234,179,8,0.35)] transition-all duration-500 hover:-translate-y-2">
-            <div class="flex items-start gap-4">
-              <div
-                class="w-16 h-16 bg-yellow-500/10 border border-yellow-500/40 rounded-2xl flex items-center justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Walmart_logo.svg"
-                  alt="Walmart Global Tech logo" class="w-12 h-12 object-contain" loading="lazy" />
-              </div>
-              <div>
-                <h3 class="text-xl font-bold text-white group-hover:text-yellow-300 transition-colors">Advanced Software
-                  Engineering Job Simulation</h3>
-                <p class="text-sm text-gray-400 font-semibold">Walmart Global Tech • Issued Aug 2025</p>
-              </div>
-            </div>
-            <p class="mt-4 text-sm text-gray-300 leading-relaxed">
-              Tackled scalability challenges and proposed architecture improvements for large-scale retail technology
-              solutions.
-            </p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Scalability</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Systems
-                Design</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Forage</span>
-            </div>
-            <div class="mt-6 pt-6 border-t border-gray-700 flex items-center justify-between gap-4">
-              <span class="text-xs text-gray-500 font-mono truncate">Credential ID: ecHzGqhs4hbQbbeyf</span>
-              <a href="https://www.theforage.com/badges/ecHzGqhs4hbQbbeyf" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-sm font-semibold text-yellow-300 hover:text-[#22d3ee] transition-colors">
-                Show credential
-                <i class="fas fa-external-link-alt text-xs"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- OneRoadmap Full Stack Developer -->
-          <article
-            class="group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-indigo-500/20 hover:border-indigo-400/60 hover:shadow-[0_0_35px_rgba(99,102,241,0.35)] transition-all duration-500 hover:-translate-y-2">
+            class="certification-card group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-indigo-500/20 hover:border-indigo-500/60 hover:shadow-[0_0_35px_rgba(99,102,241,0.35)] transition-all duration-500 hover:-translate-y-2">
             <div class="flex items-start gap-4">
               <div
                 class="w-16 h-16 bg-indigo-500/10 border border-indigo-500/40 rounded-2xl flex items-center justify-center">
-                <span class="text-2xl font-bold text-indigo-200">OR</span>
+                <i class="fas fa-comments text-3xl text-indigo-400"></i>
               </div>
               <div>
-                <h3 class="text-xl font-bold text-white group-hover:text-indigo-300 transition-colors">Full Stack
-                  Developer</h3>
-                <p class="text-sm text-gray-400 font-semibold">OneRoadmap • Issued Jul 2025</p>
+                <h3 class="text-xl font-bold text-white group-hover:text-indigo-300 transition-colors">OPIC (Oral Proficiency Interview - Computer)</h3>
+                <p class="text-sm text-gray-400 font-semibold">ACTFL • Grade: Intermediate High (IH)</p>
               </div>
             </div>
             <p class="mt-4 text-sm text-gray-300 leading-relaxed">
-              Completed the OneRoadmap growth program covering modern full-stack tooling, deployment, and project
-              delivery workflows.
+              Demonstrated high-level proficiency in English speaking, capable of handling complex tasks and social interactions effectively.
             </p>
             <div class="mt-4 flex flex-wrap gap-2">
               <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Full
-                Stack</span>
+                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">English</span>
               <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Deployment</span>
+                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Speaking</span>
               <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Team
-                Delivery</span>
-            </div>
-            <div class="mt-6 pt-6 border-t border-gray-700 flex items-center justify-between gap-4">
-              <span class="text-xs text-gray-500 font-mono truncate">Credential ID: CERT-553E3048</span>
-              <a href="https://oneroadmap.com" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-sm font-semibold text-indigo-300 hover:text-[#22d3ee] transition-colors">
-                Show credential
-                <i class="fas fa-external-link-alt text-xs"></i>
-              </a>
+                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Communication</span>
             </div>
           </article>
 
-          <!-- HackerRank Java Basic -->
+          <!-- Six Sigma Green Belt -->
           <article
-            class="group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-green-500/20 hover:border-green-400/60 hover:shadow-[0_0_35px_rgba(74,222,128,0.35)] transition-all duration-500 hover:-translate-y-2">
+            class="certification-card group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-emerald-500/20 hover:border-emerald-500/60 hover:shadow-[0_0_35px_rgba(16,185,129,0.35)] transition-all duration-500 hover:-translate-y-2">
             <div class="flex items-start gap-4">
               <div
-                class="w-16 h-16 bg-green-500/10 border border-green-500/40 rounded-2xl flex items-center justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/HackerRank_logo.png" alt="HackerRank logo"
-                  class="w-12 h-12 object-contain" loading="lazy" />
+                class="w-16 h-16 bg-emerald-500/10 border border-emerald-500/40 rounded-2xl flex items-center justify-center">
+                <i class="fas fa-chart-pie text-3xl text-emerald-400"></i>
               </div>
               <div>
-                <h3 class="text-xl font-bold text-white group-hover:text-green-300 transition-colors">Java (Basic)</h3>
-                <p class="text-sm text-gray-400 font-semibold">HackerRank • Issued Jul 2025</p>
+                <h3 class="text-xl font-bold text-white group-hover:text-emerald-300 transition-colors">Six Sigma Green Belt</h3>
+                <p class="text-sm text-gray-400 font-semibold">KSA (Korean Standards Association)</p>
               </div>
             </div>
             <p class="mt-4 text-sm text-gray-300 leading-relaxed">
-              Verified core Java proficiency through timed assessments on object-oriented programming and data handling.
+              Certified in Six Sigma methodologies for process improvement and quality management using DMAIC (Define, Measure, Analyze, Improve, Control).
             </p>
             <div class="mt-4 flex flex-wrap gap-2">
               <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Java
-                OOP</span>
+                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Quality Control</span>
               <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Data
-                Structures</span>
+                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">DMAIC</span>
               <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Exception
-                Handling</span>
-            </div>
-            <div class="mt-6 pt-6 border-t border-gray-700 flex items-center justify-between gap-4">
-              <span class="text-xs text-gray-500 font-mono truncate">Credential ID:
-                https://www.hackerrank.com/certificates/fc95686f92b5</span>
-              <a href="https://www.hackerrank.com/certificates/fc95686f92b5" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-sm font-semibold text-green-300 hover:text-[#22d3ee] transition-colors">
-                Show credential
-                <i class="fas fa-external-link-alt text-xs"></i>
-              </a>
+                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Process Improvement</span>
             </div>
           </article>
 
-          <!-- HackerRank Python Basics -->
+          <!-- Class 1 Ordinary Driver's License -->
           <article
-            class="group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-emerald-400/20 hover:border-emerald-300/60 hover:shadow-[0_0_35px_rgba(52,211,153,0.35)] transition-all duration-500 hover:-translate-y-2">
+            class="certification-card group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-blue-500/20 hover:border-blue-500/60 hover:shadow-[0_0_35px_rgba(59,130,246,0.35)] transition-all duration-500 hover:-translate-y-2">
             <div class="flex items-start gap-4">
               <div
-                class="w-16 h-16 bg-emerald-400/10 border border-emerald-400/40 rounded-2xl flex items-center justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/HackerRank_logo.png" alt="HackerRank logo"
-                  class="w-12 h-12 object-contain" loading="lazy" />
+                class="w-16 h-16 bg-blue-500/10 border border-blue-500/40 rounded-2xl flex items-center justify-center">
+                <i class="fas fa-id-card text-3xl text-blue-400"></i>
               </div>
               <div>
-                <h3 class="text-xl font-bold text-white group-hover:text-emerald-200 transition-colors">Python (Basics)
-                </h3>
-                <p class="text-sm text-gray-400 font-semibold">HackerRank • Issued Jul 2025</p>
+                <h3 class="text-xl font-bold text-white group-hover:text-blue-300 transition-colors">Class 1 Ordinary Driver's License</h3>
+                <p class="text-sm text-gray-400 font-semibold">Korea National Police Agency</p>
               </div>
             </div>
             <p class="mt-4 text-sm text-gray-300 leading-relaxed">
-              Demonstrated understanding of Python syntax, collections, and modular programming through a rigorous
-              certification test.
+              Licensed to operate passenger cars, trucks under 12 tons, and construction machinery (under 3 tons).
             </p>
             <div class="mt-4 flex flex-wrap gap-2">
               <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Control
-                Flow</span>
+                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Driving</span>
               <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Collections</span>
-              <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Objects
-                &amp; Types</span>
-            </div>
-            <div class="mt-6 pt-6 border-t border-gray-700 flex items-center justify-between gap-4">
-              <span class="text-xs text-gray-500 font-mono truncate">Credential ID:
-                https://www.hackerrank.com/certificates/875041c6d9df</span>
-              <a href="https://www.hackerrank.com/certificates/875041c6d9df" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-200 hover:text-[#22d3ee] transition-colors">
-                Show credential
-                <i class="fas fa-external-link-alt text-xs"></i>
-              </a>
+                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Transportation</span>
             </div>
           </article>
 
-          <!-- Google Introduction to Generative AI -->
+          <!-- Forklift Driver's License -->
           <article
-            class="group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-slate-500/20 hover:border-slate-300/60 hover:shadow-[0_0_35px_rgba(148,163,184,0.35)] transition-all duration-500 hover:-translate-y-2">
+            class="certification-card group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-orange-500/20 hover:border-orange-500/60 hover:shadow-[0_0_35px_rgba(249,115,22,0.35)] transition-all duration-500 hover:-translate-y-2">
             <div class="flex items-start gap-4">
               <div
-                class="w-16 h-16 bg-slate-500/10 border border-slate-400/40 rounded-2xl flex items-center justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google logo"
-                  class="w-12 h-12 object-contain" loading="lazy" />
+                class="w-16 h-16 bg-orange-500/10 border border-orange-500/40 rounded-2xl flex items-center justify-center">
+                <i class="fas fa-truck-loading text-3xl text-orange-400"></i>
               </div>
               <div>
-                <h3 class="text-xl font-bold text-white group-hover:text-slate-200 transition-colors">Introduction to
-                  Generative AI</h3>
-                <p class="text-sm text-gray-400 font-semibold">Google • Issued Jun 2025</p>
+                <h3 class="text-xl font-bold text-white group-hover:text-orange-300 transition-colors">Forklift Driver's License</h3>
+                <p class="text-sm text-gray-400 font-semibold">HRDK (Human Resources Development Service of Korea)</p>
               </div>
             </div>
             <p class="mt-4 text-sm text-gray-300 leading-relaxed">
-              Studied foundational concepts behind generative AI models, their applications, and responsible innovation
-              principles.
+              Certified to operate forklift trucks for material handling and logistics operations.
             </p>
             <div class="mt-4 flex flex-wrap gap-2">
               <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Generative
-                AI</span>
+                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Heavy Equipment</span>
               <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Responsible
-                AI</span>
+                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Logistics</span>
               <span
-                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">AI
-                Foundations</span>
-            </div>
-            <div class="mt-6 pt-6 border-t border-gray-700 flex items-center justify-between gap-4">
-              <span class="text-xs text-gray-500 font-mono truncate">Credential ID: Not provided</span>
-              <a href="https://www.cloudskillsboost.google/" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-sm font-semibold text-slate-200 hover:text-[#22d3ee] transition-colors">
-                Show credential
-                <i class="fas fa-external-link-alt text-xs"></i>
-              </a>
+                class="inline-flex items-center px-3 py-1 rounded-full bg-gray-800/60 text-xs font-semibold text-gray-200 border border-gray-700/60">Safety</span>
             </div>
           </article>
 
+        </div>
+
+        <!-- Load More Certifications Button -->
+        <div id="load-more-certs-container" class="text-center mt-12 hidden">
+          <button id="load-more-certs-btn"
+            class="px-8 py-3 bg-gray-800 hover:bg-gray-700 text-white font-bold rounded-full border border-gray-600 transition-all duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#14b8a6]">
+            Load More <i class="fas fa-chevron-down ml-2"></i>
+          </button>
         </div>
       </div>
     </section>
@@ -3414,7 +3042,7 @@
                 Send Me a Message
               </h3>
 
-              <form id="contact-form" action="https://formspree.io/f/xrbonqka" method="POST" class="space-y-6"
+              <form id="contact-form" action="https://formspree.io/f/mgoljpyk" method="POST" class="space-y-6"
                 aria-label="Contact form">
 
                 <!-- Name -->
