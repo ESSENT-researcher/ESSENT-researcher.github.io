@@ -3399,7 +3399,8 @@
         }
 
         window.addEventListener('scroll', highlightNavigation);
-        highlightNavigation();
+        // 페이지 로드 시 아무 메뉴도 강조되지 않도록 초기 함수 호출을 제거합니다.
+        // highlightNavigation();
       });
     </script>
 
