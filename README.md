@@ -181,12 +181,6 @@ A **professional portfolio website** for **Dhruv Thakar**, Computer Science stud
   - LED Circuit Design
   - Sumo Bot Competition
 
-- **Upcoming Projects** (4):
-  - 2D Game Engine (C++)
-  - Arduino Smart Home System
-  - Arduino Weather Station
-  - Advanced Data Structures Library (C++)
-
 ### 🎯 **Skills**
 - Programming Languages (Java, Python, JavaScript, C++)
 - Web Development (HTML/CSS, Tailwind, React)
